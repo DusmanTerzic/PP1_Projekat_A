@@ -1,0 +1,145 @@
+INFO  11:10:59,005 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  11:10:59,033 - #2 program
+INFO  11:10:59,033 - #46 MJProgram
+INFO  11:10:59,033 - #5 const
+INFO  11:10:59,033 - #46 int
+INFO  11:10:59,033 - #46 a
+INFO  11:10:59,039 - #31 =
+INFO  11:10:59,039 - #45 25
+INFO  11:10:59,039 - #34 ;
+INFO  11:10:59,039 - #46 int
+INFO  11:10:59,039 - #46 b
+INFO  11:10:59,041 - #36 ,
+INFO  11:10:59,041 - #46 c
+INFO  11:10:59,041 - #34 ;
+INFO  11:10:59,041 - #46 int
+INFO  11:10:59,041 - #46 d
+INFO  11:10:59,041 - #42 [
+INFO  11:10:59,041 - #43 ]
+INFO  11:10:59,041 - #36 ,
+INFO  11:10:59,041 - #46 e
+INFO  11:10:59,041 - #42 [
+INFO  11:10:59,041 - #43 ]
+INFO  11:10:59,044 - #34 ;
+INFO  11:10:59,044 - #46 bool
+INFO  11:10:59,044 - #46 f
+INFO  11:10:59,044 - #34 ;
+INFO  11:10:59,044 - #46 char
+INFO  11:10:59,044 - #46 g
+INFO  11:10:59,044 - #34 ;
+INFO  11:10:59,044 - #40 {
+INFO  11:10:59,044 - #41 }
+INFO  11:10:59,046 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          ProgramDeclarations(
+            NoProgramDeclarations(
+            ) [NoProgramDeclarations]
+            ConstProgramDecl(
+              ConstDecl(
+                ConstTypeDecl(
+                  Type(
+                   int
+                  ) [Type]
+                ) [ConstTypeDecl]
+               a
+                NumberConst(
+                 25
+                ) [NumberConst]
+                NoConstList(
+                ) [NoConstList]
+              ) [ConstDecl]
+            ) [ConstProgramDecl]
+          ) [ProgramDeclarations]
+          VarProgramDecl(
+            VarDeclaration(
+              VarType(
+                Type(
+                 int
+                ) [Type]
+              ) [VarType]
+              VarName(
+               b
+                NoOptBrackets(
+                ) [NoOptBrackets]
+              ) [VarName]
+              Vars(
+                NoVars(
+                ) [NoVars]
+                VarName(
+                 c
+                  NoOptBrackets(
+                  ) [NoOptBrackets]
+                ) [VarName]
+              ) [Vars]
+            ) [VarDeclaration]
+          ) [VarProgramDecl]
+        ) [ProgramDeclarations]
+        VarProgramDecl(
+          VarDeclaration(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarName(
+             d
+              OptBrackets(
+              ) [OptBrackets]
+            ) [VarName]
+            Vars(
+              NoVars(
+              ) [NoVars]
+              VarName(
+               e
+                OptBrackets(
+                ) [OptBrackets]
+              ) [VarName]
+            ) [Vars]
+          ) [VarDeclaration]
+        ) [VarProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDeclaration(
+          VarType(
+            Type(
+             bool
+            ) [Type]
+          ) [VarType]
+          VarName(
+           f
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+          NoVars(
+          ) [NoVars]
+        ) [VarDeclaration]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    VarProgramDecl(
+      VarDeclaration(
+        VarType(
+          Type(
+           char
+          ) [Type]
+        ) [VarType]
+        VarName(
+         g
+          NoOptBrackets(
+          ) [NoOptBrackets]
+        ) [VarName]
+        NoVars(
+        ) [NoVars]
+      ) [VarDeclaration]
+    ) [VarProgramDecl]
+  ) [ProgramDeclarations]
+  NoMethodDecls(
+  ) [NoMethodDecls]
+) [Program]
+INFO  11:10:59,046 - ===================================
+ERROR 11:10:59,046 - Greska: Metoda main ne postoji! na liniji 1

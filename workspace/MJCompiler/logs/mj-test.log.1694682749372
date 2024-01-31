@@ -1,0 +1,167 @@
+INFO  11:11:15,722 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  11:11:15,747 - #2 program
+INFO  11:11:15,747 - #46 MJProgram
+INFO  11:11:15,747 - #5 const
+INFO  11:11:15,747 - #46 int
+INFO  11:11:15,747 - #46 a
+INFO  11:11:15,747 - #31 =
+INFO  11:11:15,747 - #45 25
+INFO  11:11:15,747 - #34 ;
+INFO  11:11:15,747 - #46 int
+INFO  11:11:15,747 - #46 b
+INFO  11:11:15,747 - #36 ,
+INFO  11:11:15,747 - #46 c
+INFO  11:11:15,747 - #34 ;
+INFO  11:11:15,747 - #46 int
+INFO  11:11:15,747 - #46 d
+INFO  11:11:15,747 - #42 [
+INFO  11:11:15,747 - #43 ]
+INFO  11:11:15,747 - #36 ,
+INFO  11:11:15,747 - #46 e
+INFO  11:11:15,747 - #42 [
+INFO  11:11:15,747 - #43 ]
+INFO  11:11:15,764 - #34 ;
+INFO  11:11:15,764 - #46 bool
+INFO  11:11:15,764 - #46 f
+INFO  11:11:15,764 - #34 ;
+INFO  11:11:15,764 - #46 char
+INFO  11:11:15,764 - #46 g
+INFO  11:11:15,764 - #34 ;
+INFO  11:11:15,764 - #40 {
+INFO  11:11:15,764 - #14 void
+INFO  11:11:15,764 - #46 main
+INFO  11:11:15,765 - #38 (
+INFO  11:11:15,765 - #39 )
+INFO  11:11:15,765 - #40 {
+INFO  11:11:15,765 - #41 }
+INFO  11:11:15,767 - #41 }
+INFO  11:11:15,770 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          ProgramDeclarations(
+            NoProgramDeclarations(
+            ) [NoProgramDeclarations]
+            ConstProgramDecl(
+              ConstDecl(
+                ConstTypeDecl(
+                  Type(
+                   int
+                  ) [Type]
+                ) [ConstTypeDecl]
+               a
+                NumberConst(
+                 25
+                ) [NumberConst]
+                NoConstList(
+                ) [NoConstList]
+              ) [ConstDecl]
+            ) [ConstProgramDecl]
+          ) [ProgramDeclarations]
+          VarProgramDecl(
+            VarDeclaration(
+              VarType(
+                Type(
+                 int
+                ) [Type]
+              ) [VarType]
+              VarName(
+               b
+                NoOptBrackets(
+                ) [NoOptBrackets]
+              ) [VarName]
+              Vars(
+                NoVars(
+                ) [NoVars]
+                VarName(
+                 c
+                  NoOptBrackets(
+                  ) [NoOptBrackets]
+                ) [VarName]
+              ) [Vars]
+            ) [VarDeclaration]
+          ) [VarProgramDecl]
+        ) [ProgramDeclarations]
+        VarProgramDecl(
+          VarDeclaration(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarName(
+             d
+              OptBrackets(
+              ) [OptBrackets]
+            ) [VarName]
+            Vars(
+              NoVars(
+              ) [NoVars]
+              VarName(
+               e
+                OptBrackets(
+                ) [OptBrackets]
+              ) [VarName]
+            ) [Vars]
+          ) [VarDeclaration]
+        ) [VarProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDeclaration(
+          VarType(
+            Type(
+             bool
+            ) [Type]
+          ) [VarType]
+          VarName(
+           f
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+          NoVars(
+          ) [NoVars]
+        ) [VarDeclaration]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    VarProgramDecl(
+      VarDeclaration(
+        VarType(
+          Type(
+           char
+          ) [Type]
+        ) [VarType]
+        VarName(
+         g
+          NoOptBrackets(
+          ) [NoOptBrackets]
+        ) [VarName]
+        NoVars(
+        ) [NoVars]
+      ) [VarDeclaration]
+    ) [VarProgramDecl]
+  ) [ProgramDeclarations]
+  MethodDeclarationList(
+    NoMethodDecls(
+    ) [NoMethodDecls]
+    MethodDecl(
+      MethodTypeName(
+        NoType(
+        ) [NoType]
+       main
+      ) [MethodTypeName]
+      FormRParen(
+        NoFormPars(
+        ) [NoFormPars]
+      ) [FormRParen]
+      NoVarDeclarations(
+      ) [NoVarDeclarations]
+      NoStatementList(
+      ) [NoStatementList]
+    ) [MethodDecl]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  11:11:15,770 - ===================================

@@ -1,0 +1,69 @@
+INFO  00:25:47,990 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  00:25:48,011 - #2 program
+INFO  00:25:48,011 - #46 MJProgram
+INFO  00:25:48,011 - #5 const
+INFO  00:25:48,016 - #46 int
+INFO  00:25:48,016 - #46 a
+INFO  00:25:48,016 - #31 =
+INFO  00:25:48,016 - #45 25
+INFO  00:25:48,016 - #34 ;
+INFO  00:25:48,016 - #46 int
+INFO  00:25:48,016 - #46 b
+INFO  00:25:48,016 - #36 ,
+INFO  00:25:48,019 - #46 c
+INFO  00:25:48,019 - #34 ;
+INFO  00:25:48,019 - #40 {
+INFO  00:25:48,019 - #41 }
+INFO  00:25:48,023 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ProgramDeclarations(
+    ProgramDeclarations(
+      NoProgramDeclarations(
+      ) [NoProgramDeclarations]
+      ConstProgramDecl(
+        ConstDecl(
+          ConstTypeDecl(
+            Type(
+             int
+            ) [Type]
+          ) [ConstTypeDecl]
+         a
+          NumberConst(
+           25
+          ) [NumberConst]
+          NoConstList(
+          ) [NoConstList]
+        ) [ConstDecl]
+      ) [ConstProgramDecl]
+    ) [ProgramDeclarations]
+    VarProgramDecl(
+      VarDecl(
+        VarType(
+          Type(
+           int
+          ) [Type]
+        ) [VarType]
+        VarName(
+         b
+          NoOptBrackets(
+          ) [NoOptBrackets]
+        ) [VarName]
+        Vars(
+          NoVars(
+          ) [NoVars]
+          VarName(
+           c
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+        ) [Vars]
+      ) [VarDecl]
+    ) [VarProgramDecl]
+  ) [ProgramDeclarations]
+  NoMethodDecls(
+  ) [NoMethodDecls]
+) [Program]
+INFO  00:25:48,023 - ===================================
+ERROR 00:25:48,025 - Greska: Metoda main ne postoji! na liniji 1

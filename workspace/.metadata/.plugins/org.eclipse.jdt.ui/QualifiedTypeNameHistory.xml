@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.OptBrackets"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ReturnStmt"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.FormParTypeName"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.NoExtends"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.FormalParameters"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.structure.HashTableDataStructure"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.structure.SymbolDataStructure"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.WhileStatement"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.PrintStmt"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.OptionalSimpleExpr"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.util.MySymbolTableVisitor"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.VisitorAdaptor"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.VarDecl"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.DesignatorStatement"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.CounterVisitor.VarCounter"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter"/>
+    <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.CodeGenerator"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.mj.runtime.Code"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+</qualifiedTypeNameHistroy>

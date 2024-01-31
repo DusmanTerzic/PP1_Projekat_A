@@ -1,0 +1,279 @@
+INFO  00:27:18,443 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  00:27:18,465 - #2 program
+INFO  00:27:18,465 - #46 MJProgram
+INFO  00:27:18,465 - #5 const
+INFO  00:27:18,465 - #46 int
+INFO  00:27:18,465 - #46 a
+INFO  00:27:18,465 - #31 =
+INFO  00:27:18,465 - #45 25
+INFO  00:27:18,465 - #34 ;
+INFO  00:27:18,465 - #46 int
+INFO  00:27:18,472 - #46 b
+INFO  00:27:18,472 - #36 ,
+INFO  00:27:18,472 - #46 c
+INFO  00:27:18,472 - #34 ;
+INFO  00:27:18,472 - #46 int
+INFO  00:27:18,474 - #46 d
+INFO  00:27:18,474 - #42 [
+INFO  00:27:18,474 - #43 ]
+INFO  00:27:18,474 - #36 ,
+INFO  00:27:18,474 - #46 e
+INFO  00:27:18,474 - #42 [
+INFO  00:27:18,474 - #43 ]
+INFO  00:27:18,485 - #34 ;
+INFO  00:27:18,485 - #46 bool
+INFO  00:27:18,485 - #46 f
+INFO  00:27:18,485 - #34 ;
+INFO  00:27:18,485 - #46 char
+INFO  00:27:18,486 - #46 g
+INFO  00:27:18,486 - #34 ;
+INFO  00:27:18,486 - #40 {
+INFO  00:27:18,486 - #46 int
+INFO  00:27:18,486 - #46 calc
+INFO  00:27:18,486 - #38 (
+INFO  00:27:18,486 - #46 int
+INFO  00:27:18,486 - #46 a
+INFO  00:27:18,486 - #36 ,
+INFO  00:27:18,487 - #46 int
+INFO  00:27:18,487 - #46 b
+INFO  00:27:18,487 - #39 )
+INFO  00:27:18,487 - #46 int
+INFO  00:27:18,487 - #46 k
+INFO  00:27:18,487 - #34 ;
+INFO  00:27:18,487 - #40 {
+INFO  00:27:18,487 - #46 k
+INFO  00:27:18,487 - #31 =
+INFO  00:27:18,487 - #46 a
+INFO  00:27:18,489 - #18 +
+INFO  00:27:18,490 - #46 b
+INFO  00:27:18,490 - #34 ;
+INFO  00:27:18,492 - #41 }
+INFO  00:27:18,492 - #41 }
+INFO  00:27:18,493 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          ProgramDeclarations(
+            NoProgramDeclarations(
+            ) [NoProgramDeclarations]
+            ConstProgramDecl(
+              ConstDecl(
+                ConstTypeDecl(
+                  Type(
+                   int
+                  ) [Type]
+                ) [ConstTypeDecl]
+               a
+                NumberConst(
+                 25
+                ) [NumberConst]
+                NoConstList(
+                ) [NoConstList]
+              ) [ConstDecl]
+            ) [ConstProgramDecl]
+          ) [ProgramDeclarations]
+          VarProgramDecl(
+            VarDecl(
+              VarType(
+                Type(
+                 int
+                ) [Type]
+              ) [VarType]
+              VarName(
+               b
+                NoOptBrackets(
+                ) [NoOptBrackets]
+              ) [VarName]
+              Vars(
+                NoVars(
+                ) [NoVars]
+                VarName(
+                 c
+                  NoOptBrackets(
+                  ) [NoOptBrackets]
+                ) [VarName]
+              ) [Vars]
+            ) [VarDecl]
+          ) [VarProgramDecl]
+        ) [ProgramDeclarations]
+        VarProgramDecl(
+          VarDecl(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarName(
+             d
+              OptBrackets(
+              ) [OptBrackets]
+            ) [VarName]
+            Vars(
+              NoVars(
+              ) [NoVars]
+              VarName(
+               e
+                OptBrackets(
+                ) [OptBrackets]
+              ) [VarName]
+            ) [Vars]
+          ) [VarDecl]
+        ) [VarProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDecl(
+          VarType(
+            Type(
+             bool
+            ) [Type]
+          ) [VarType]
+          VarName(
+           f
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+          NoVars(
+          ) [NoVars]
+        ) [VarDecl]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    VarProgramDecl(
+      VarDecl(
+        VarType(
+          Type(
+           char
+          ) [Type]
+        ) [VarType]
+        VarName(
+         g
+          NoOptBrackets(
+          ) [NoOptBrackets]
+        ) [VarName]
+        NoVars(
+        ) [NoVars]
+      ) [VarDecl]
+    ) [VarProgramDecl]
+  ) [ProgramDeclarations]
+  MethodDeclarationList(
+    NoMethodDecls(
+    ) [NoMethodDecls]
+    MethodDecl(
+      MethodTypeName(
+        MethType(
+          Type(
+           int
+          ) [Type]
+        ) [MethType]
+       calc
+      ) [MethodTypeName]
+      FormRParen(
+        FormalParameters(
+          FormParTypeName(
+            Type(
+             int
+            ) [Type]
+           a
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [FormParTypeName]
+          MultipleFormalParameters(
+            NoMulFormPars(
+            ) [NoMulFormPars]
+            FormParTypeName(
+              Type(
+               int
+              ) [Type]
+             b
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [FormParTypeName]
+          ) [MultipleFormalParameters]
+        ) [FormalParameters]
+      ) [FormRParen]
+      VarDeclarations(
+        NoVarDeclarations(
+        ) [NoVarDeclarations]
+        VarDecl(
+          VarType(
+            Type(
+             int
+            ) [Type]
+          ) [VarType]
+          VarName(
+           k
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+          NoVars(
+          ) [NoVars]
+        ) [VarDecl]
+      ) [VarDeclarations]
+      StmtList(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementSingle(
+          DesignatorSingleStmt(
+            DesSemi(
+              DesStmt(
+                Designator(
+                 k
+                  NoDesList(
+                  ) [NoDesList]
+                ) [Designator]
+                AssignDesExpr(
+                  AssignOperator(
+                  ) [AssignOperator]
+                  PositiveExpr(
+                    Term(
+                      DesignatorFactor(
+                        Designator(
+                         a
+                          NoDesList(
+                          ) [NoDesList]
+                        ) [Designator]
+                        NoOptActParsParen(
+                        ) [NoOptActParsParen]
+                      ) [DesignatorFactor]
+                      NoMoreFactors(
+                      ) [NoMoreFactors]
+                    ) [Term]
+                    MoreTermsAdded(
+                      NoMoreTerms(
+                      ) [NoMoreTerms]
+                      AddedTerm(
+                        PlusOp(
+                        ) [PlusOp]
+                        Term(
+                          DesignatorFactor(
+                            Designator(
+                             b
+                              NoDesList(
+                              ) [NoDesList]
+                            ) [Designator]
+                            NoOptActParsParen(
+                            ) [NoOptActParsParen]
+                          ) [DesignatorFactor]
+                          NoMoreFactors(
+                          ) [NoMoreFactors]
+                        ) [Term]
+                      ) [AddedTerm]
+                    ) [MoreTermsAdded]
+                  ) [PositiveExpr]
+                ) [AssignDesExpr]
+              ) [DesStmt]
+            ) [DesSemi]
+          ) [DesignatorSingleStmt]
+        ) [StatementSingle]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  00:27:18,497 - ===================================
+ERROR 00:27:18,498 - Tipovi nisu kompatibilni na liniji 6
+ERROR 00:27:18,498 - Tipovi moraju biti int! na liniji 11
+ERROR 00:27:18,498 - Nije pronadjen return iskaz u metodi: calc na liniji 8
+ERROR 00:27:18,498 - Greska: Metoda main ne postoji! na liniji 1

@@ -1,0 +1,9 @@
+INFO  21:20:01,971 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  21:20:01,977 - #2 program
+INFO  21:20:01,977 - #45 MJProgram
+INFO  21:20:01,977 - #5 const
+INFO  21:20:01,978 - #45 bool
+INFO  21:20:01,978 - #45 z
+INFO  21:20:01,978 - #31 =
+INFO  21:20:01,978 - #46 true
+INFO  21:20:01,978 - #34 ;

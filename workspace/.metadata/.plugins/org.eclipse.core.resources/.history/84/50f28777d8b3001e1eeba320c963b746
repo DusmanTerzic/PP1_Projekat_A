@@ -1,0 +1,607 @@
+package rs.ac.bg.etf.pp1;
+
+import java.util.Collection;
+import java.util.LinkedList;
+
+import org.apache.log4j.Logger;
+import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.symboltable.*;
+import rs.etf.pp1.symboltable.concepts.*;
+import rs.etf.pp1.symboltable.structure.HashTableDataStructure;
+import rs.etf.pp1.symboltable.structure.SymbolDataStructure;
+
+public class SemanticAnalyzer extends VisitorAdaptor {
+	Logger log = Logger.getLogger(getClass());
+	boolean errorDetected = false;
+	Struct boolType; //No boolean in Tab, so we add it at the start
+	boolean mainFound = false;
+	int nizElemCount = 0;
+	int nVars;
+	
+	//For const declarations
+	int constDeclarationCurrent = 0; //1-nc, 2-cc, 3-bc
+	Integer constDeclarationNumber = null;
+	Character constDeclarationChar = null;
+	Boolean constDeclarationBool = null;
+	
+	//For class declarations
+	Struct currentClassStruct = Tab.noType; //currently declared class Type
+	Obj currentClassObj = Tab.noObj; //currently declared class Object
+	Struct currentClassExt = Tab.noType;
+	
+	//For method declarations
+	Obj currentMethodObj = Tab.noObj;
+	int numberOfFormPars = 0;
+	boolean returnFound = false;
+	
+	//For var declarations
+	Struct currentVarDeclType = Tab.noType;
+	boolean isVarArray = false;
+	
+	//For conditions
+	String lastRelOp ="";
+	
+	//For statements
+	boolean currentWhile = false;
+	
+	/* -----------SEMANTIC CHECKS------------*/
+	
+	//statements
+	
+	public void visit(DesStmt ds) {
+		if(ds.getDesStmtChoice() instanceof IncDes || ds.getDesStmtChoice() instanceof DecDes) {
+			if(ds.getDesignator().obj.getType() != Tab.intType) {
+	    		report_error("Tip mora biti int ", ds);
+			}
+		} else if(ds.getDesStmtChoice() instanceof AssignDesExpr) {
+			AssignDesExpr assignDesExpr = (AssignDesExpr)ds.getDesStmtChoice();
+			if(assignDesExpr.getDesignatorExpr() instanceof DesExpr) {
+				DesExpr desExpr = (DesExpr) assignDesExpr.getDesignatorExpr();
+				if(!desExpr.getExpr().struct.compatibleWith(ds.getDesignator().obj.getType())) {
+					if(ds.getDesignator().obj.getType().getKind() == Struct.Array && !desExpr.getExpr().struct.compatibleWith(ds.getDesignator().obj.getType().getElemType()))
+							report_error("Nekompatibilni tipovi kod dodjele", ds);
+				}
+			}else { //findAny
+				FindAnyExpr findAny = (FindAnyExpr) assignDesExpr.getDesignatorExpr();
+				if(findAny.getExpr().struct != Tab.intType) {
+		    		report_error("Izraz u zagradi za findAny mora biti int", ds);
+				}
+				if(ds.getDesignator().obj.getType() != boolType) {
+		    		report_error("Izraz sa lijeve strane mora biti bool ", ds);
+				}
+				if(findAny.getDesignator().obj.getType().getKind() != Struct.Array) {
+		    		report_error("Objekat nad kojim se izvrsava findAny mora biti niz", ds);
+				}
+			}
+		} else { //ActPars ce da vidimo
+			ActParsDes parsDes = (ActParsDes) ds.getDesStmtChoice();
+			if(ds.getDesignator().obj.getKind() == Obj.Meth) {
+				if(parsDes.getOptActPars() instanceof NoActPars) {
+					if(ds.getDesignator().obj.getLevel() != 0) {
+			    		report_error("Parametri ne odgovaraju metodi", ds);
+					}
+				} else {
+					OptionalActPars oap = (OptionalActPars)parsDes.getOptActPars();
+					ActPars pars = oap.getActPars();
+					int numOfPars = ds.getDesignator().obj.getLevel();
+					Collection<Obj> methVars = ds.getDesignator().obj.getLocalSymbols();
+					int i = 0;
+					MoreExprs me = pars.getMoreExprs();
+					for(Obj element:methVars) {
+						if(i==numOfPars) break; //kraj definicije parametara
+						if(i==0) {
+							Expr currentExpr = pars.getExpr(); //prvi parametar
+							if(!element.getType().compatibleWith(currentExpr.struct)) {
+					    		report_error("Ne poklapaju se tipovi stvarnih i formalnih parametara", ds);
+							}
+						} else {
+							if(me instanceof NoMoreExprs) {
+					    		report_error("Ne poklapa se broj stvarnih i formalnih parametara", ds);
+							} else {
+								MoreExpressions me2 = ((MoreExpressions)me);
+								Expr currentExpr =me2.getCommaExpr().getExpr();
+								if(!element.getType().compatibleWith(currentExpr.struct)) {
+						    		report_error("Ne poklapaju se tipovi stvarnih i formalnih parametara", ds);
+								}
+								me = me2.getMoreExprs();
+							}
+						}
+						i++;
+					}
+					if(!(me instanceof NoMoreExprs)) {
+			    		report_error("Previse stvarnih parametara za funkciju", ds);
+					}
+				}
+			} else {
+	    		report_error("Izraz mora biti metoda!", ds);
+			}
+		}
+	}
+	
+	public void visit(DesExpr de) {
+		de.struct = de.getExpr().struct;
+	}
+	
+	public void visit(FindAnyExpr fe) {
+		fe.struct = boolType;
+	}
+	
+	public void visit(PrintStmt ps) {
+		Struct s = ps.getExpr().struct;
+		if(s != Tab.charType && s!= Tab.intType && s!=boolType) {
+    		report_error("Neodgovarajuc izraz za print! ", ps);
+		}
+	}
+	
+	public void visit(ReadStmt rs) {
+		Struct s = rs.getDesignator().obj.getType();
+		if(s != Tab.charType && s!= Tab.intType && s!=boolType) {
+    		report_error("Neodgovarajuc izraz za print! ", rs);
+		}
+	}
+	
+	public void visit(BreakSingle bs) {
+		if(!currentWhile) {
+    		report_error("Break se mora naci unutar while petlje ", bs);
+		}
+	}
+	
+	public void visit(ContinueSingle bs) {
+		if(!currentWhile) {
+    		report_error("Continue se mora naci unutar while petlje ", bs);
+		}
+	}
+	
+	public void visit(WhileExpr we) {
+		currentWhile = true;
+	}
+	
+	public void visit(WhileStatement ws) {
+		currentWhile = false;
+	}
+	
+	//conditions
+	public void visit(IsEqualOp e) {
+		lastRelOp = "==";
+	}
+	
+	public void visit(NEqualOp e) {
+		lastRelOp = "!=";
+	}
+	
+	public void visit(GreaterOp e) {
+		lastRelOp = ">";
+	}
+	
+	public void visit(GEQOp e) {
+		lastRelOp = ">=";
+	}
+	
+	public void visit(LesserOp e) {
+		lastRelOp = "<";
+	}
+	
+	public void visit(LEQOp e) {
+		lastRelOp = "<=";
+	}
+	
+	public void visit(ConditionFact cf) {
+		if(!cf.getExpr().struct.compatibleWith(cf.getOptRelopExpr().struct)) {
+    		report_error("Tipovi u uslovu nisu kompatibilni", cf);
+		}
+		if(cf.getExpr().struct.getKind() == Struct.Class || cf.getExpr().struct.getKind() == Struct.Array) {
+			if(!(lastRelOp.equals("==") || lastRelOp.equals("!="))) {
+	    		report_error("Uz klase i nizove se ne moze koristiti operator" + lastRelOp, cf);
+			}
+		}
+	}
+	
+	public void visit(OptRelop e) {
+		 e.struct = e.getExpr().struct;
+	}
+	
+	public void visit(NoOptRelop n) {
+		n.struct = Tab.noType;
+	}
+	
+	//expr
+	public void visit(PositiveExpr ex) {
+		if(ex.getMoreTerms().struct != Tab.noType) {
+			if(ex.getTerm().struct.compatibleWith(ex.getMoreTerms().struct))
+				ex.struct = ex.getTerm().struct;
+			else {
+	    		report_error("Tipovi moraju biti int!", ex);
+				ex.struct = Tab.noType;
+			}
+		} else {
+			ex.struct = ex.getTerm().struct;
+		}
+
+	}
+	
+	public void visit(OptionalExpr oe) {
+		oe.struct = oe.getExpr().struct;
+	}
+	
+	public void visit(NoOptionalExpr noe) {
+		noe.struct = Tab.noType;
+	}
+	
+	public void visit(DesIdent des) {
+		des.obj = Tab.find(des.getName()); //klasa/ident/array
+	}
+	
+	public void visit(DesDotIdent des) {
+		boolean found = false;
+		Obj parent = des.getDesignator().obj; //klasa koja sadrzi element
+		if(parent.getType().getKind() == Struct.Class) {
+			DesDotIdent myNode = (DesDotIdent) des;
+			for(Obj local : parent.getLocalSymbols()){
+				if(local.getName() == myNode.getName()) {
+					des.obj = local;
+					found = true;
+				}
+			}
+			if(!found) {
+	    		report_error("Identifikator ne polje oznacava polje klase" , des);
+			}
+		} else {
+    		report_error("Identifikator ne oznacava klasu" , des.getParent());
+		}
+	}
+	
+	public void visit(DesBrackExpr desBrack) {
+		if(desBrack.getExpr().struct != Tab.intType) {
+    		report_error("Nije dobar izraz za adresiranje niza" , desBrack);
+		} else {
+			desBrack.obj = desBrack.getDesignatorBrack().getDesignator().obj; //des je element niza
+		}
+		
+	}
+	
+	
+	//terms
+	public void visit(Term t) {
+		if(!t.getFactor().struct.compatibleWith(t.getMoreFactors().struct) && t.getMoreFactors().struct != Tab.noType) {
+    		report_error("Tipovi nisu kompatibilni", t);
+		} else {
+			t.struct = t.getFactor().struct;
+		}
+	}
+	
+	public void visit(MoreTermsAdded mt) {
+		if(mt.getMoreTerms().struct.compatibleWith(mt.getAddedTerm().struct) || mt.getMoreTerms().struct == Tab.noType)
+			mt.struct = mt.getAddedTerm().struct;
+		else 
+    		report_error("Tipovi nisu kompatibilni", mt);
+	}
+	
+	public void visit(AddedTerm at) {
+		at.struct = at.getTerm().struct;
+	}
+	
+	public void visit(NoMoreTerms nt) {
+		nt.struct = Tab.noType;
+	}
+	
+	//factors
+	public void visit(MoreFactorsAdded mf) {
+		if(mf.getMoreFactors() instanceof MoreFactorsAdded && mf.getMoreFactors().struct.compatibleWith(mf.getFactor().struct))
+			mf.struct = mf.getFactor().struct;
+		else if(mf.getMoreFactors() instanceof NoMoreFactors) {
+			mf.struct = mf.getFactor().struct;
+		} else {
+    		report_error("Tipovi nisu kompatibilni", mf);
+		}
+	}
+	
+	public void visit(NoMoreFactors nf) {
+		nf.struct = Tab.noType;
+	}
+	
+	public void visit(AddedFactor af) {
+		af.struct = af.getFactor().struct;
+	}
+	
+	public void visit(NumFactor nf) {
+		nf.struct = Tab.intType;
+	}
+	
+	public void visit(CharFactor nf) {
+		nf.struct = Tab.charType;
+	}
+	
+	public void visit(BoolFactor nf) {
+		nf.struct = boolType;
+	}
+	
+	public void visit(MinusFactor mf) {
+		mf.struct = mf.getFactor().struct;
+	}
+	
+	public void visit(ExprFactor ef) {
+		ef.struct = ef.getExpr().struct;
+	}
+	
+	public void visit(NewFactor nf) {
+		nf.struct = Tab.find(nf.getType().getTypeName()).getType();
+		if(nf.struct == Tab.noType) {
+    		report_error("Nije pronadjen tip : " + nf.getType().getTypeName(), nf);
+		}else if (nf.struct == Tab.intType || nf.struct==Tab.charType || nf.struct == boolType){
+			if(nf.getOptExpr() instanceof NoOptionalExpr) //ako je niz moze da se pravi objekat
+				report_error("Ne moze se praviti objekat osnovnog tipa pomocu operatora new ", nf);
+			else { //niz
+				Struct old = nf.struct;
+				nf.struct = new Struct(Struct.Array, old);
+			}
+		}
+	}
+	
+	public void visit(DesignatorFactor df) {
+		if(df.getDesignator().obj.getType().getKind()==Struct.Array)
+			df.struct = df.getDesignator().obj.getType().getElemType();
+		else
+			df.struct = df.getDesignator().obj.getType();
+	}
+	
+	/* -----------SYMBOL TABLE GENERATING------------*/
+	
+	//Method declarations
+	public void visit(MethodDecl md) {
+		Obj methodObj = md.getMethodTypeName().obj;
+		
+		Tab.chainLocalSymbols(methodObj);
+		Tab.closeScope();
+		
+		if(methodObj.getType()!=Tab.noType && !returnFound) {
+    		report_error("Nije pronadjen return iskaz u metodi: " + md.getMethodTypeName().getMethName(), md);
+		}
+		
+		methodObj.setLevel(numberOfFormPars);
+		currentMethodObj = Tab.noObj;
+		numberOfFormPars = 0;
+		returnFound = false;
+	}
+	
+	public void visit(MethodTypeName mtn) {
+		if(mtn.getMethName().equals("main")) {
+			mainFound = true;
+		}
+		if(Tab.find(mtn.getMethName()) != Tab.noObj && Tab.find(mtn.getMethName()).getKind()== Obj.Meth) {
+    		report_error("Greska: Metoda "+ mtn.getMethName() + " je vec deklarisana! ", mtn);
+    	} else {
+    		mtn.obj = Tab.insert(Obj.Meth, mtn.getMethName(), mtn.getMethodType().struct);
+    		currentMethodObj = mtn.obj;
+    		
+    		Tab.openScope();
+    	}
+	}
+	
+	public void visit(MethType mt) {
+		mt.struct = mt.getType().struct;
+	}
+	
+	public void visit(NoType nt) {
+		nt.struct = Tab.noType;
+	}
+	public void visit(FormalParameters fp) {
+		if(currentClassObj != Tab.noObj) {
+			Tab.insert(Obj.Var, "this", currentClassStruct);
+		}
+	}
+	
+	public void visit(NoFormPars nfp) {
+		if(currentClassObj != Tab.noObj) {
+			Tab.insert(Obj.Var, "this", currentClassStruct);
+		}
+	}
+	
+	public void visit(FormParTypeName fptn) {
+		if(isVarArray) {
+			Struct newStruct = new Struct(Struct.Array);
+			newStruct.setElementType(fptn.getType().struct);
+			Tab.insert(Obj.Var, fptn.getIdent(), newStruct);
+		} else 
+			Tab.insert(Obj.Var, fptn.getIdent(), fptn.getType().struct);
+		numberOfFormPars++;
+		isVarArray = false;
+	}
+	
+	public void visit(OptionalSimpleExpr os) {
+		os.struct = os.getExpr().struct;
+	}
+	
+	public void visit(NoOptSimExpr os) {
+		os.struct = Tab.noType;
+	}
+	
+	public void visit(ReturnStmt rs){
+    	returnFound = true;
+    	if(rs.getOptSimpleExpr().struct != currentMethodObj.getType()){
+    		report_error("Greska: Return iskaz mora odgovarati tipu metode! ", rs);
+    	}
+    }
+	
+	//Class declarations
+	public void visit(ClassDecl cd) {
+		Tab.chainLocalSymbols(currentClassObj);
+		Tab.closeScope();
+		
+		HashTableDataStructure table = new HashTableDataStructure();
+		table.insertKey(currentClassObj);
+		
+		currentClassStruct.setMembers(table);
+		currentClassStruct = Tab.noType;
+		currentClassExt = Tab.noType;
+		currentClassObj = Tab.noObj;
+	}
+	
+	public void visit(ClassName cn) {
+    	if(Tab.find(cn.getName()) != Tab.noObj && Tab.find(cn.getName()).getKind()== Obj.Type) {
+    		report_error("Greska: Klasa "+ cn.getName() + " je vec deklarisana! ", cn);
+    	} else {
+    		currentClassStruct = new Struct(Struct.Class);
+    		currentClassObj = Tab.insert(Obj.Type, cn.getName(), currentClassStruct);
+    		Tab.openScope();
+    	}
+	}
+	
+	public void visit(Extends ex) {
+		if(Tab.find(ex.getType().getTypeName()) == Tab.noObj) {
+    		report_error("Nije pronadjena klasa za izvodjenje " + ex.getType().getTypeName() + " u tabeli simbola!", ex);
+		} else {
+	    	currentClassExt = ex.getType().struct;
+	    	
+	    	currentClassStruct.setElementType(currentClassExt); //postavljamo tip nadklase
+	    	currentClassStruct.setMembers(currentClassExt.getMembersTable()); //prepis polja nadklase
+		}
+    }
+    
+    public void visit(NoExtends nex) {
+    	currentClassExt = Tab.noType;
+    }
+	
+	//Var declarations
+    public void visit(VarDeclaration vd) {
+    	currentVarDeclType = Tab.noType;
+    }
+    
+    public void visit(VarName vn) {
+    	int kind = Obj.NO_VALUE;
+    	if(currentClassStruct != Tab.noType && currentMethodObj == Tab.noObj) { //ako smo u klasi, van metode
+    		kind = Obj.Fld;
+    	} else { //ako nismo u klasi ili jesmo, ali u metodi
+    		kind = Obj.Var;
+    	}
+    	if(Tab.find(vn.getName()) != Tab.noObj && Tab.find(vn.getName()).getKind()== kind) {
+    		report_error("Greska: Promjenljiva "+ vn.getName() + " je vec deklarisana! ", vn);
+    	} else {
+        	if(isVarArray) {
+        		Struct varStruct = new Struct(Struct.Array);
+        		varStruct.setElementType(currentVarDeclType);
+    			Obj varNode = Tab.insert(kind, vn.getName(), varStruct);
+        	} else {
+    			Obj varNode = Tab.insert(kind, vn.getName(), currentVarDeclType);
+        	}
+    	}
+    	isVarArray = false;
+    }
+    
+    public void visit(OptBrackets optBrackets) {
+		isVarArray = true;
+	}
+    
+    public void visit(VarType vt) {
+    	currentVarDeclType = vt.getType().struct;
+    }
+	
+	//Const declarations
+	public void visit(ConstDecl cd) {
+		if(Tab.find(cd.getName()) != Tab.noObj && Tab.find(cd.getName()).getKind()== Obj.Con) {
+    		report_error("Greska: Konstanta "+ cd.getName() + " je vec deklarisana! ", cd);
+    	} else {
+    		if(cd.getConstType().struct == cd.getConstTypeDecl().getType().struct) { //poklapaju se tipovi
+        		cd.obj = Tab.insert(Obj.Con, cd.getName(), cd.getConstType().struct);
+        		
+        		//setting constant value
+        		switch(constDeclarationCurrent) {
+        		case 1: //number
+            		cd.obj.setAdr(constDeclarationNumber);
+            		break;
+        		case 2: //char
+        			cd.obj.setAdr(constDeclarationChar);
+        		case 3: //bool
+        			if(constDeclarationBool.booleanValue()) 
+            			cd.obj.setAdr(1);
+        			else 
+            			cd.obj.setAdr(0);
+        		}
+        	} else {
+        		report_error("Greska: Deklarisani tip konstante i tip izraza se ne poklapaju! ", cd);
+        	}
+    	}
+    	constDeclarationCurrent = 0;
+    	constDeclarationNumber = null;
+    	constDeclarationChar = null;
+    	constDeclarationBool = null;
+    }
+	
+	public void visit(NumberConst nc) {
+    	nc.struct = Tab.intType;
+    	constDeclarationNumber = nc.getNumber();
+    	constDeclarationCurrent = 1;
+    }
+    
+    public void visit(CharConst cc) {
+    	cc.struct = Tab.charType;
+    	constDeclarationChar = cc.getCharacter();
+    	constDeclarationCurrent = 2;
+    }
+    
+    public void visit(BoolConst bc) {
+    	bc.struct = boolType;
+    	constDeclarationBool = Boolean.parseBoolean(bc.getBool());
+    	constDeclarationCurrent = 3;
+    }
+    
+    //Namespaces
+    public void visit(NamespaceName namespaceName) {
+    	
+    }
+    
+	//Program declarations
+	public void visit(ProgName progName) {
+    	boolType = new Struct(Struct.Bool);
+    	Tab.insert(Obj.Type, "bool", boolType);
+    	
+    	progName.obj = Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
+    	Tab.openScope();
+    }
+    
+    public void visit(Program program) {
+    	nVars = Tab.currentScope.getnVars();
+    	Tab.chainLocalSymbols(program.getProgName().obj);
+    	Tab.closeScope();
+    	
+    	if(!mainFound) {
+    		report_error("Greska: Metoda main ne postoji!", program);
+    	}
+    }
+    
+    //General declarations
+    public void visit(Type type) {
+    	Obj typeNode = Tab.find(type.getTypeName());
+    	if(typeNode == Tab.noObj) {
+    		report_error("Nije pronadjen tip " + type.getTypeName() + "u tabeli simbola!", null);
+    		type.struct = Tab.noType;
+    	} else {
+    		if(Obj.Type == typeNode.getKind()) {
+    			type.struct = typeNode.getType();
+    		} else {
+        		report_error("Greska: Ime" + type.getTypeName() + "nije tip!", type);
+        		type.struct = Tab.noType;
+    		}
+    	}
+    }
+	//Error reporting
+	public void report_error(String message, SyntaxNode info) {
+		errorDetected = true;
+		StringBuilder msg = new StringBuilder(message);
+		int line = (info == null) ? 0: info.getLine();
+		if (line != 0)
+			msg.append (" na liniji ").append(line);
+		log.error(msg.toString());
+	}
+
+	public void report_info(String message, SyntaxNode info) {
+		StringBuilder msg = new StringBuilder(message); 
+		int line = (info == null) ? 0: info.getLine();
+		if (line != 0)
+			msg.append (" na liniji ").append(line);
+		log.info(msg.toString());
+	}
+	
+	public boolean passed(){
+		return !errorDetected;
+	}
+}

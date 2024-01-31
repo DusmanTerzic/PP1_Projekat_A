@@ -1,0 +1,103 @@
+INFO  22:39:37,584 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  22:39:37,590 - #2 program
+INFO  22:39:37,590 - #45 MJProgram
+INFO  22:39:37,590 - #5 const
+INFO  22:39:37,590 - #45 bool
+INFO  22:39:37,590 - #45 z
+INFO  22:39:37,590 - #31 =
+INFO  22:39:37,590 - #46 true
+INFO  22:39:37,592 - #34 ;
+INFO  22:39:37,592 - #45 int
+INFO  22:39:37,592 - #45 a
+INFO  22:39:37,592 - #36 ,
+INFO  22:39:37,593 - #45 b
+INFO  22:39:37,593 - #34 ;
+INFO  22:39:37,593 - #45 char
+INFO  22:39:37,594 - #45 c
+INFO  22:39:37,594 - #42 [
+INFO  22:39:37,594 - #43 ]
+INFO  22:39:37,594 - #34 ;
+INFO  22:39:37,594 - #45 bool
+INFO  22:39:37,594 - #45 d
+INFO  22:39:37,594 - #42 [
+INFO  22:39:37,606 - #43 ]
+INFO  22:39:37,606 - #36 ,
+INFO  22:39:37,606 - #45 e
+INFO  22:39:37,606 - #34 ;
+INFO  22:39:37,606 - #40 {
+INFO  22:39:37,606 - #41 }
+INFO  22:39:37,607 - Program(
+ MJProgram
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          NoProgramDeclarations(
+          ) [NoProgramDeclarations]
+          ConstProgramDecl(
+            ConstDecl(
+              Type(
+               bool
+              ) [Type]
+             z
+              BoolConst(
+               true
+              ) [BoolConst]
+              NoConstList(
+              ) [NoConstList]
+            ) [ConstDecl]
+          ) [ConstProgramDecl]
+        ) [ProgramDeclarations]
+        VarProgramDecl(
+          VarDecl(
+            Type(
+             int
+            ) [Type]
+           a
+            NoOptBrackets(
+            ) [NoOptBrackets]
+            Vars(
+              NoVars(
+              ) [NoVars]
+             b
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [Vars]
+          ) [VarDecl]
+        ) [VarProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDecl(
+          Type(
+           char
+          ) [Type]
+         c
+          OptBrackets(
+          ) [OptBrackets]
+          NoVars(
+          ) [NoVars]
+        ) [VarDecl]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    VarProgramDecl(
+      VarDecl(
+        Type(
+         bool
+        ) [Type]
+       d
+        OptBrackets(
+        ) [OptBrackets]
+        Vars(
+          NoVars(
+          ) [NoVars]
+         e
+          NoOptBrackets(
+          ) [NoOptBrackets]
+        ) [Vars]
+      ) [VarDecl]
+    ) [VarProgramDecl]
+  ) [ProgramDeclarations]
+) [Program]
+INFO  22:39:37,607 - ===================================
+INFO  22:39:37,608 -  Print count calls = 0
+INFO  22:39:37,608 -  Deklarisanih promenljivih ima = 0

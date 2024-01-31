@@ -1,0 +1,243 @@
+INFO  23:46:38,163 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  23:46:38,175 - #2 program
+INFO  23:46:38,175 - #45 MJProgram
+INFO  23:46:38,175 - #5 const
+INFO  23:46:38,176 - #45 bool
+INFO  23:46:38,176 - #45 z
+INFO  23:46:38,176 - #31 =
+INFO  23:46:38,176 - #46 true
+INFO  23:46:38,176 - #34 ;
+INFO  23:46:38,176 - #45 int
+INFO  23:46:38,177 - #45 a
+INFO  23:46:38,177 - #36 ,
+INFO  23:46:38,178 - #45 b
+INFO  23:46:38,178 - #34 ;
+INFO  23:46:38,178 - #45 char
+INFO  23:46:38,178 - #45 c
+INFO  23:46:38,178 - #42 [
+INFO  23:46:38,179 - #43 ]
+INFO  23:46:38,179 - #34 ;
+INFO  23:46:38,179 - #45 bool
+INFO  23:46:38,179 - #45 d
+INFO  23:46:38,179 - #42 [
+INFO  23:46:38,190 - #43 ]
+INFO  23:46:38,190 - #36 ,
+INFO  23:46:38,190 - #45 e
+INFO  23:46:38,190 - #34 ;
+INFO  23:46:38,190 - #4 class
+INFO  23:46:38,190 - #45 Klasa1
+INFO  23:46:38,190 - #15 extends
+INFO  23:46:38,190 - #45 Integer
+INFO  23:46:38,190 - #40 {
+INFO  23:46:38,190 - #45 int
+INFO  23:46:38,191 - #45 d
+INFO  23:46:38,191 - #36 ,
+INFO  23:46:38,191 - #45 f
+INFO  23:46:38,191 - #34 ;
+INFO  23:46:38,191 - #40 {
+INFO  23:46:38,191 - #14 void
+INFO  23:46:38,192 - #45 b
+INFO  23:46:38,192 - #38 (
+INFO  23:46:38,192 - #45 int
+INFO  23:46:38,192 - #45 a
+INFO  23:46:38,192 - #36 ,
+INFO  23:46:38,192 - #45 char
+INFO  23:46:38,192 - #45 b
+INFO  23:46:38,192 - #39 )
+INFO  23:46:38,192 - #40 {
+INFO  23:46:38,193 - #41 }
+INFO  23:46:38,193 - #45 int
+INFO  23:46:38,193 - #45 d
+INFO  23:46:38,193 - #38 (
+INFO  23:46:38,193 - #39 )
+INFO  23:46:38,193 - #40 {
+INFO  23:46:38,193 - #40 {
+INFO  23:46:38,194 - #3 break
+INFO  23:46:38,194 - #34 ;
+INFO  23:46:38,194 - #16 continue
+INFO  23:46:38,194 - #34 ;
+INFO  23:46:38,194 - #41 }
+INFO  23:46:38,195 - #41 }
+INFO  23:46:38,195 - #41 }
+INFO  23:46:38,195 - #41 }
+INFO  23:46:38,195 - #40 {
+INFO  23:46:38,195 - #41 }
+INFO  23:46:38,196 - Program(
+ MJProgram
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          ProgramDeclarations(
+            NoProgramDeclarations(
+            ) [NoProgramDeclarations]
+            ConstProgramDecl(
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+               z
+                BoolConst(
+                 true
+                ) [BoolConst]
+                NoConstList(
+                ) [NoConstList]
+              ) [ConstDecl]
+            ) [ConstProgramDecl]
+          ) [ProgramDeclarations]
+          VarProgramDecl(
+            VarDecl(
+              Type(
+               int
+              ) [Type]
+             a
+              NoOptBrackets(
+              ) [NoOptBrackets]
+              Vars(
+                NoVars(
+                ) [NoVars]
+               b
+                NoOptBrackets(
+                ) [NoOptBrackets]
+              ) [Vars]
+            ) [VarDecl]
+          ) [VarProgramDecl]
+        ) [ProgramDeclarations]
+        VarProgramDecl(
+          VarDecl(
+            Type(
+             char
+            ) [Type]
+           c
+            OptBrackets(
+            ) [OptBrackets]
+            NoVars(
+            ) [NoVars]
+          ) [VarDecl]
+        ) [VarProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDecl(
+          Type(
+           bool
+          ) [Type]
+         d
+          OptBrackets(
+          ) [OptBrackets]
+          Vars(
+            NoVars(
+            ) [NoVars]
+           e
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [Vars]
+        ) [VarDecl]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    ClassProgramDecl(
+      ClassDeclaration(
+       Klasa1
+        Extends(
+          Type(
+           Integer
+          ) [Type]
+        ) [Extends]
+        VarDeclarations(
+          NoVarDeclarations(
+          ) [NoVarDeclarations]
+          VarDecl(
+            Type(
+             int
+            ) [Type]
+           d
+            NoOptBrackets(
+            ) [NoOptBrackets]
+            Vars(
+              NoVars(
+              ) [NoVars]
+             f
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [Vars]
+          ) [VarDecl]
+        ) [VarDeclarations]
+        OptionalClassDeclarations(
+          MethodDeclarationList(
+            MethodDeclarationList(
+              NoMethodDecls(
+              ) [NoMethodDecls]
+              MethodDeclaration(
+                NoType(
+                ) [NoType]
+               b
+                FormRParen(
+                  FormalParameters(
+                    Type(
+                     int
+                    ) [Type]
+                   a
+                    NoOptBrackets(
+                    ) [NoOptBrackets]
+                    MultipleFormalParameters(
+                      NoMulFormPars(
+                      ) [NoMulFormPars]
+                      Type(
+                       char
+                      ) [Type]
+                     b
+                      NoOptBrackets(
+                      ) [NoOptBrackets]
+                    ) [MultipleFormalParameters]
+                  ) [FormalParameters]
+                ) [FormRParen]
+                NoVarDeclarations(
+                ) [NoVarDeclarations]
+                NoStatementList(
+                ) [NoStatementList]
+              ) [MethodDeclaration]
+            ) [MethodDeclarationList]
+            MethodDeclaration(
+              MethType(
+                Type(
+                 int
+                ) [Type]
+              ) [MethType]
+             d
+              FormRParen(
+                NoFormPars(
+                ) [NoFormPars]
+              ) [FormRParen]
+              NoVarDeclarations(
+              ) [NoVarDeclarations]
+              StmtList(
+                NoStatementList(
+                ) [NoStatementList]
+                StatementsMultiple(
+                  Statements(
+                    StmtList(
+                      StmtList(
+                        NoStatementList(
+                        ) [NoStatementList]
+                        StatementSingle(
+                          BreakSingle(
+                          ) [BreakSingle]
+                        ) [StatementSingle]
+                      ) [StmtList]
+                      StatementSingle(
+                        ContinueSingle(
+                        ) [ContinueSingle]
+                      ) [StatementSingle]
+                    ) [StmtList]
+                  ) [Statements]
+                ) [StatementsMultiple]
+              ) [StmtList]
+            ) [MethodDeclaration]
+          ) [MethodDeclarationList]
+        ) [OptionalClassDeclarations]
+      ) [ClassDeclaration]
+    ) [ClassProgramDecl]
+  ) [ProgramDeclarations]
+) [Program]
+INFO  23:46:38,196 - ===================================
+INFO  23:46:38,198 -  Print count calls = 0
+INFO  23:46:38,198 -  Deklarisanih promenljivih ima = 0

@@ -1,0 +1,1234 @@
+INFO  20:10:38,643 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\test301.mj
+INFO  20:10:38,683 - #2 program
+INFO  20:10:38,683 - #46 test301
+INFO  20:10:38,683 - #5 const
+INFO  20:10:38,683 - #46 int
+INFO  20:10:38,683 - #46 nula
+INFO  20:10:38,685 - #31 =
+INFO  20:10:38,685 - #45 0
+INFO  20:10:38,685 - #34 ;
+INFO  20:10:38,685 - #5 const
+INFO  20:10:38,685 - #46 int
+INFO  20:10:38,685 - #46 jedan
+INFO  20:10:38,685 - #31 =
+INFO  20:10:38,685 - #45 1
+INFO  20:10:38,685 - #34 ;
+INFO  20:10:38,685 - #5 const
+INFO  20:10:38,685 - #46 int
+INFO  20:10:38,687 - #46 pet
+INFO  20:10:38,687 - #31 =
+INFO  20:10:38,687 - #45 5
+INFO  20:10:38,687 - #34 ;
+INFO  20:10:38,687 - #46 int
+INFO  20:10:38,687 - #46 niz
+INFO  20:10:38,687 - #42 [
+INFO  20:10:38,687 - #43 ]
+INFO  20:10:38,687 - #36 ,
+INFO  20:10:38,689 - #46 niz2
+INFO  20:10:38,689 - #42 [
+INFO  20:10:38,689 - #43 ]
+INFO  20:10:38,689 - #36 ,
+INFO  20:10:38,689 - #46 a
+INFO  20:10:38,689 - #36 ,
+INFO  20:10:38,689 - #46 b
+INFO  20:10:38,690 - #34 ;
+INFO  20:10:38,690 - #46 char
+INFO  20:10:38,690 - #46 nizch
+INFO  20:10:38,690 - #42 [
+INFO  20:10:38,690 - #43 ]
+INFO  20:10:38,690 - #34 ;
+INFO  20:10:38,690 - #40 {
+INFO  20:10:38,690 - #14 void
+INFO  20:10:38,690 - #46 main
+INFO  20:10:38,690 - #38 (
+INFO  20:10:38,690 - #39 )
+INFO  20:10:38,690 - #46 int
+INFO  20:10:38,693 - #46 bodovi
+INFO  20:10:38,693 - #34 ;
+INFO  20:10:38,693 - #46 bool
+INFO  20:10:38,693 - #46 br
+INFO  20:10:38,693 - #34 ;
+INFO  20:10:38,693 - #40 {
+INFO  20:10:38,693 - #46 bodovi
+INFO  20:10:38,693 - #31 =
+INFO  20:10:38,693 - #45 0
+INFO  20:10:38,694 - #34 ;
+INFO  20:10:38,696 - #46 bodovi
+INFO  20:10:38,696 - #32 ++
+INFO  20:10:38,696 - #34 ;
+INFO  20:10:38,696 - #46 bodovi
+INFO  20:10:38,697 - #31 =
+INFO  20:10:38,697 - #46 bodovi
+INFO  20:10:38,697 - #18 +
+INFO  20:10:38,697 - #46 jedan
+INFO  20:10:38,697 - #34 ;
+INFO  20:10:38,697 - #46 bodovi
+INFO  20:10:38,697 - #31 =
+INFO  20:10:38,697 - #46 bodovi
+INFO  20:10:38,697 - #20 *
+INFO  20:10:38,697 - #46 pet
+INFO  20:10:38,699 - #34 ;
+INFO  20:10:38,699 - #46 bodovi
+INFO  20:10:38,699 - #33 --
+INFO  20:10:38,699 - #34 ;
+INFO  20:10:38,699 - #11 print
+INFO  20:10:38,699 - #38 (
+INFO  20:10:38,699 - #46 bodovi
+INFO  20:10:38,699 - #39 )
+INFO  20:10:38,699 - #34 ;
+INFO  20:10:38,699 - #46 niz
+INFO  20:10:38,701 - #31 =
+INFO  20:10:38,701 - #9 new
+INFO  20:10:38,701 - #46 int
+INFO  20:10:38,701 - #42 [
+INFO  20:10:38,701 - #45 3
+INFO  20:10:38,701 - #43 ]
+INFO  20:10:38,701 - #34 ;
+INFO  20:10:38,701 - #46 niz
+INFO  20:10:38,701 - #42 [
+INFO  20:10:38,701 - #46 nula
+INFO  20:10:38,701 - #43 ]
+INFO  20:10:38,701 - #31 =
+INFO  20:10:38,701 - #46 jedan
+INFO  20:10:38,701 - #34 ;
+INFO  20:10:38,701 - #46 niz
+INFO  20:10:38,701 - #42 [
+INFO  20:10:38,701 - #45 1
+INFO  20:10:38,701 - #43 ]
+INFO  20:10:38,701 - #31 =
+INFO  20:10:38,701 - #45 2
+INFO  20:10:38,701 - #34 ;
+INFO  20:10:38,701 - #46 niz
+INFO  20:10:38,701 - #42 [
+INFO  20:10:38,701 - #46 niz
+INFO  20:10:38,701 - #42 [
+INFO  20:10:38,701 - #46 jedan
+INFO  20:10:38,701 - #43 ]
+INFO  20:10:38,701 - #43 ]
+INFO  20:10:38,701 - #31 =
+INFO  20:10:38,703 - #46 niz
+INFO  20:10:38,703 - #42 [
+INFO  20:10:38,703 - #46 niz
+INFO  20:10:38,703 - #42 [
+INFO  20:10:38,703 - #45 0
+INFO  20:10:38,703 - #43 ]
+INFO  20:10:38,703 - #43 ]
+INFO  20:10:38,703 - #20 *
+INFO  20:10:38,703 - #45 3
+INFO  20:10:38,703 - #34 ;
+INFO  20:10:38,703 - #46 bodovi
+INFO  20:10:38,703 - #31 =
+INFO  20:10:38,703 - #46 niz
+INFO  20:10:38,703 - #42 [
+INFO  20:10:38,703 - #45 2
+INFO  20:10:38,703 - #43 ]
+INFO  20:10:38,703 - #21 /
+INFO  20:10:38,703 - #46 niz
+INFO  20:10:38,704 - #42 [
+INFO  20:10:38,704 - #45 0
+INFO  20:10:38,704 - #43 ]
+INFO  20:10:38,704 - #34 ;
+INFO  20:10:38,704 - #11 print
+INFO  20:10:38,704 - #38 (
+INFO  20:10:38,704 - #46 bodovi
+INFO  20:10:38,704 - #39 )
+INFO  20:10:38,704 - #34 ;
+INFO  20:10:38,704 - #11 print
+INFO  20:10:38,704 - #38 (
+INFO  20:10:38,704 - #46 niz
+INFO  20:10:38,704 - #42 [
+INFO  20:10:38,704 - #45 2
+INFO  20:10:38,704 - #43 ]
+INFO  20:10:38,704 - #39 )
+INFO  20:10:38,704 - #34 ;
+INFO  20:10:38,704 - #46 nizch
+INFO  20:10:38,704 - #31 =
+INFO  20:10:38,704 - #9 new
+INFO  20:10:38,704 - #46 char
+INFO  20:10:38,704 - #42 [
+INFO  20:10:38,704 - #45 3
+INFO  20:10:38,704 - #43 ]
+INFO  20:10:38,704 - #34 ;
+INFO  20:10:38,705 - #46 nizch
+INFO  20:10:38,705 - #42 [
+INFO  20:10:38,705 - #45 0
+INFO  20:10:38,705 - #43 ]
+INFO  20:10:38,705 - #31 =
+INFO  20:10:38,705 - #48 a
+INFO  20:10:38,705 - #34 ;
+INFO  20:10:38,705 - #46 nizch
+INFO  20:10:38,705 - #42 [
+INFO  20:10:38,705 - #46 jedan
+INFO  20:10:38,705 - #43 ]
+INFO  20:10:38,705 - #31 =
+INFO  20:10:38,705 - #48 b
+INFO  20:10:38,705 - #34 ;
+INFO  20:10:38,705 - #46 nizch
+INFO  20:10:38,705 - #42 [
+INFO  20:10:38,705 - #46 pet
+INFO  20:10:38,705 - #19 -
+INFO  20:10:38,705 - #45 3
+INFO  20:10:38,705 - #43 ]
+INFO  20:10:38,705 - #31 =
+INFO  20:10:38,705 - #48 c
+INFO  20:10:38,705 - #34 ;
+INFO  20:10:38,705 - #11 print
+INFO  20:10:38,705 - #38 (
+INFO  20:10:38,705 - #46 nizch
+INFO  20:10:38,705 - #42 [
+INFO  20:10:38,705 - #45 1
+INFO  20:10:38,705 - #43 ]
+INFO  20:10:38,705 - #39 )
+INFO  20:10:38,705 - #34 ;
+INFO  20:10:38,705 - #11 print
+INFO  20:10:38,705 - #38 (
+INFO  20:10:38,705 - #46 nizch
+INFO  20:10:38,705 - #42 [
+INFO  20:10:38,705 - #46 jedan
+INFO  20:10:38,705 - #20 *
+INFO  20:10:38,705 - #45 2
+INFO  20:10:38,705 - #43 ]
+INFO  20:10:38,705 - #39 )
+INFO  20:10:38,705 - #34 ;
+INFO  20:10:38,705 - #12 read
+INFO  20:10:38,705 - #38 (
+INFO  20:10:38,705 - #46 bodovi
+INFO  20:10:38,705 - #39 )
+INFO  20:10:38,705 - #34 ;
+INFO  20:10:38,705 - #11 print
+INFO  20:10:38,705 - #38 (
+INFO  20:10:38,705 - #46 bodovi
+INFO  20:10:38,705 - #39 )
+INFO  20:10:38,705 - #34 ;
+INFO  20:10:38,705 - #41 }
+INFO  20:10:38,705 - #41 }
+INFO  20:10:38,713 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          ProgramDeclarations(
+            NoProgramDeclarations(
+            ) [NoProgramDeclarations]
+            ConstProgramDecl(
+              ConstDecl(
+                ConstTypeDecl(
+                  Type(
+                   int
+                  ) [Type]
+                ) [ConstTypeDecl]
+               nula
+                NumberConst(
+                 0
+                ) [NumberConst]
+                NoConstList(
+                ) [NoConstList]
+              ) [ConstDecl]
+            ) [ConstProgramDecl]
+          ) [ProgramDeclarations]
+          ConstProgramDecl(
+            ConstDecl(
+              ConstTypeDecl(
+                Type(
+                 int
+                ) [Type]
+              ) [ConstTypeDecl]
+             jedan
+              NumberConst(
+               1
+              ) [NumberConst]
+              NoConstList(
+              ) [NoConstList]
+            ) [ConstDecl]
+          ) [ConstProgramDecl]
+        ) [ProgramDeclarations]
+        ConstProgramDecl(
+          ConstDecl(
+            ConstTypeDecl(
+              Type(
+               int
+              ) [Type]
+            ) [ConstTypeDecl]
+           pet
+            NumberConst(
+             5
+            ) [NumberConst]
+            NoConstList(
+            ) [NoConstList]
+          ) [ConstDecl]
+        ) [ConstProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDeclaration(
+          VarType(
+            Type(
+             int
+            ) [Type]
+          ) [VarType]
+          VarName(
+           niz
+            OptBrackets(
+            ) [OptBrackets]
+          ) [VarName]
+          Vars(
+            Vars(
+              Vars(
+                NoVars(
+                ) [NoVars]
+                VarName(
+                 niz2
+                  OptBrackets(
+                  ) [OptBrackets]
+                ) [VarName]
+              ) [Vars]
+              VarName(
+               a
+                NoOptBrackets(
+                ) [NoOptBrackets]
+              ) [VarName]
+            ) [Vars]
+            VarName(
+             b
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [VarName]
+          ) [Vars]
+        ) [VarDeclaration]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    VarProgramDecl(
+      VarDeclaration(
+        VarType(
+          Type(
+           char
+          ) [Type]
+        ) [VarType]
+        VarName(
+         nizch
+          OptBrackets(
+          ) [OptBrackets]
+        ) [VarName]
+        NoVars(
+        ) [NoVars]
+      ) [VarDeclaration]
+    ) [VarProgramDecl]
+  ) [ProgramDeclarations]
+  MethodDeclarationList(
+    NoMethodDecls(
+    ) [NoMethodDecls]
+    MethodDecl(
+      MethodTypeName(
+        NoType(
+        ) [NoType]
+       main
+      ) [MethodTypeName]
+      FormRParen(
+        NoFormPars(
+        ) [NoFormPars]
+      ) [FormRParen]
+      VarDeclarations(
+        VarDeclarations(
+          NoVarDeclarations(
+          ) [NoVarDeclarations]
+          VarDeclaration(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarName(
+             bodovi
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [VarName]
+            NoVars(
+            ) [NoVars]
+          ) [VarDeclaration]
+        ) [VarDeclarations]
+        VarDeclaration(
+          VarType(
+            Type(
+             bool
+            ) [Type]
+          ) [VarType]
+          VarName(
+           br
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+          NoVars(
+          ) [NoVars]
+        ) [VarDeclaration]
+      ) [VarDeclarations]
+      StmtList(
+        StmtList(
+          StmtList(
+            StmtList(
+              StmtList(
+                StmtList(
+                  StmtList(
+                    StmtList(
+                      StmtList(
+                        StmtList(
+                          StmtList(
+                            StmtList(
+                              StmtList(
+                                StmtList(
+                                  StmtList(
+                                    StmtList(
+                                      StmtList(
+                                        StmtList(
+                                          StmtList(
+                                            StmtList(
+                                              StmtList(
+                                                NoStatementList(
+                                                ) [NoStatementList]
+                                                StatementSingle(
+                                                  DesignatorSingleStmt(
+                                                    DesSemi(
+                                                      DesStmt(
+                                                        DesIdent(
+                                                         bodovi
+                                                        ) [DesIdent]
+                                                        AssignDesExpr(
+                                                          AssignOperator(
+                                                          ) [AssignOperator]
+                                                          DesExpr(
+                                                            PositiveExpr(
+                                                              Term(
+                                                                NumFactor(
+                                                                 0
+                                                                ) [NumFactor]
+                                                                NoMoreFactors(
+                                                                ) [NoMoreFactors]
+                                                              ) [Term]
+                                                              NoMoreTerms(
+                                                              ) [NoMoreTerms]
+                                                            ) [PositiveExpr]
+                                                          ) [DesExpr]
+                                                        ) [AssignDesExpr]
+                                                      ) [DesStmt]
+                                                    ) [DesSemi]
+                                                  ) [DesignatorSingleStmt]
+                                                ) [StatementSingle]
+                                              ) [StmtList]
+                                              StatementSingle(
+                                                DesignatorSingleStmt(
+                                                  DesSemi(
+                                                    DesStmt(
+                                                      DesIdent(
+                                                       bodovi
+                                                      ) [DesIdent]
+                                                      IncDes(
+                                                      ) [IncDes]
+                                                    ) [DesStmt]
+                                                  ) [DesSemi]
+                                                ) [DesignatorSingleStmt]
+                                              ) [StatementSingle]
+                                            ) [StmtList]
+                                            StatementSingle(
+                                              DesignatorSingleStmt(
+                                                DesSemi(
+                                                  DesStmt(
+                                                    DesIdent(
+                                                     bodovi
+                                                    ) [DesIdent]
+                                                    AssignDesExpr(
+                                                      AssignOperator(
+                                                      ) [AssignOperator]
+                                                      DesExpr(
+                                                        PositiveExpr(
+                                                          Term(
+                                                            DesignatorFactor(
+                                                              DesIdent(
+                                                               bodovi
+                                                              ) [DesIdent]
+                                                              NoOptActParsParen(
+                                                              ) [NoOptActParsParen]
+                                                            ) [DesignatorFactor]
+                                                            NoMoreFactors(
+                                                            ) [NoMoreFactors]
+                                                          ) [Term]
+                                                          MoreTermsAdded(
+                                                            AddedTerm(
+                                                              PlusOp(
+                                                              ) [PlusOp]
+                                                              Term(
+                                                                DesignatorFactor(
+                                                                  DesIdent(
+                                                                   jedan
+                                                                  ) [DesIdent]
+                                                                  NoOptActParsParen(
+                                                                  ) [NoOptActParsParen]
+                                                                ) [DesignatorFactor]
+                                                                NoMoreFactors(
+                                                                ) [NoMoreFactors]
+                                                              ) [Term]
+                                                            ) [AddedTerm]
+                                                            NoMoreTerms(
+                                                            ) [NoMoreTerms]
+                                                          ) [MoreTermsAdded]
+                                                        ) [PositiveExpr]
+                                                      ) [DesExpr]
+                                                    ) [AssignDesExpr]
+                                                  ) [DesStmt]
+                                                ) [DesSemi]
+                                              ) [DesignatorSingleStmt]
+                                            ) [StatementSingle]
+                                          ) [StmtList]
+                                          StatementSingle(
+                                            DesignatorSingleStmt(
+                                              DesSemi(
+                                                DesStmt(
+                                                  DesIdent(
+                                                   bodovi
+                                                  ) [DesIdent]
+                                                  AssignDesExpr(
+                                                    AssignOperator(
+                                                    ) [AssignOperator]
+                                                    DesExpr(
+                                                      PositiveExpr(
+                                                        Term(
+                                                          DesignatorFactor(
+                                                            DesIdent(
+                                                             bodovi
+                                                            ) [DesIdent]
+                                                            NoOptActParsParen(
+                                                            ) [NoOptActParsParen]
+                                                          ) [DesignatorFactor]
+                                                          MoreFactorsAdded(
+                                                            MultiplyOp(
+                                                            ) [MultiplyOp]
+                                                            DesignatorFactor(
+                                                              DesIdent(
+                                                               pet
+                                                              ) [DesIdent]
+                                                              NoOptActParsParen(
+                                                              ) [NoOptActParsParen]
+                                                            ) [DesignatorFactor]
+                                                            NoMoreFactors(
+                                                            ) [NoMoreFactors]
+                                                          ) [MoreFactorsAdded]
+                                                        ) [Term]
+                                                        NoMoreTerms(
+                                                        ) [NoMoreTerms]
+                                                      ) [PositiveExpr]
+                                                    ) [DesExpr]
+                                                  ) [AssignDesExpr]
+                                                ) [DesStmt]
+                                              ) [DesSemi]
+                                            ) [DesignatorSingleStmt]
+                                          ) [StatementSingle]
+                                        ) [StmtList]
+                                        StatementSingle(
+                                          DesignatorSingleStmt(
+                                            DesSemi(
+                                              DesStmt(
+                                                DesIdent(
+                                                 bodovi
+                                                ) [DesIdent]
+                                                DecDes(
+                                                ) [DecDes]
+                                              ) [DesStmt]
+                                            ) [DesSemi]
+                                          ) [DesignatorSingleStmt]
+                                        ) [StatementSingle]
+                                      ) [StmtList]
+                                      StatementSingle(
+                                        PrintStmt(
+                                          PositiveExpr(
+                                            Term(
+                                              DesignatorFactor(
+                                                DesIdent(
+                                                 bodovi
+                                                ) [DesIdent]
+                                                NoOptActParsParen(
+                                                ) [NoOptActParsParen]
+                                              ) [DesignatorFactor]
+                                              NoMoreFactors(
+                                              ) [NoMoreFactors]
+                                            ) [Term]
+                                            NoMoreTerms(
+                                            ) [NoMoreTerms]
+                                          ) [PositiveExpr]
+                                          NoOptNumConst(
+                                          ) [NoOptNumConst]
+                                        ) [PrintStmt]
+                                      ) [StatementSingle]
+                                    ) [StmtList]
+                                    StatementSingle(
+                                      DesignatorSingleStmt(
+                                        DesSemi(
+                                          DesStmt(
+                                            DesIdent(
+                                             niz
+                                            ) [DesIdent]
+                                            AssignDesExpr(
+                                              AssignOperator(
+                                              ) [AssignOperator]
+                                              DesExpr(
+                                                PositiveExpr(
+                                                  Term(
+                                                    NewFactor(
+                                                      Type(
+                                                       int
+                                                      ) [Type]
+                                                      OptionalExpr(
+                                                        PositiveExpr(
+                                                          Term(
+                                                            NumFactor(
+                                                             3
+                                                            ) [NumFactor]
+                                                            NoMoreFactors(
+                                                            ) [NoMoreFactors]
+                                                          ) [Term]
+                                                          NoMoreTerms(
+                                                          ) [NoMoreTerms]
+                                                        ) [PositiveExpr]
+                                                      ) [OptionalExpr]
+                                                    ) [NewFactor]
+                                                    NoMoreFactors(
+                                                    ) [NoMoreFactors]
+                                                  ) [Term]
+                                                  NoMoreTerms(
+                                                  ) [NoMoreTerms]
+                                                ) [PositiveExpr]
+                                              ) [DesExpr]
+                                            ) [AssignDesExpr]
+                                          ) [DesStmt]
+                                        ) [DesSemi]
+                                      ) [DesignatorSingleStmt]
+                                    ) [StatementSingle]
+                                  ) [StmtList]
+                                  StatementSingle(
+                                    DesignatorSingleStmt(
+                                      DesSemi(
+                                        DesStmt(
+                                          DesBrackExpr(
+                                            DesIdent(
+                                             niz
+                                            ) [DesIdent]
+                                            PositiveExpr(
+                                              Term(
+                                                DesignatorFactor(
+                                                  DesIdent(
+                                                   nula
+                                                  ) [DesIdent]
+                                                  NoOptActParsParen(
+                                                  ) [NoOptActParsParen]
+                                                ) [DesignatorFactor]
+                                                NoMoreFactors(
+                                                ) [NoMoreFactors]
+                                              ) [Term]
+                                              NoMoreTerms(
+                                              ) [NoMoreTerms]
+                                            ) [PositiveExpr]
+                                          ) [DesBrackExpr]
+                                          AssignDesExpr(
+                                            AssignOperator(
+                                            ) [AssignOperator]
+                                            DesExpr(
+                                              PositiveExpr(
+                                                Term(
+                                                  DesignatorFactor(
+                                                    DesIdent(
+                                                     jedan
+                                                    ) [DesIdent]
+                                                    NoOptActParsParen(
+                                                    ) [NoOptActParsParen]
+                                                  ) [DesignatorFactor]
+                                                  NoMoreFactors(
+                                                  ) [NoMoreFactors]
+                                                ) [Term]
+                                                NoMoreTerms(
+                                                ) [NoMoreTerms]
+                                              ) [PositiveExpr]
+                                            ) [DesExpr]
+                                          ) [AssignDesExpr]
+                                        ) [DesStmt]
+                                      ) [DesSemi]
+                                    ) [DesignatorSingleStmt]
+                                  ) [StatementSingle]
+                                ) [StmtList]
+                                StatementSingle(
+                                  DesignatorSingleStmt(
+                                    DesSemi(
+                                      DesStmt(
+                                        DesBrackExpr(
+                                          DesIdent(
+                                           niz
+                                          ) [DesIdent]
+                                          PositiveExpr(
+                                            Term(
+                                              NumFactor(
+                                               1
+                                              ) [NumFactor]
+                                              NoMoreFactors(
+                                              ) [NoMoreFactors]
+                                            ) [Term]
+                                            NoMoreTerms(
+                                            ) [NoMoreTerms]
+                                          ) [PositiveExpr]
+                                        ) [DesBrackExpr]
+                                        AssignDesExpr(
+                                          AssignOperator(
+                                          ) [AssignOperator]
+                                          DesExpr(
+                                            PositiveExpr(
+                                              Term(
+                                                NumFactor(
+                                                 2
+                                                ) [NumFactor]
+                                                NoMoreFactors(
+                                                ) [NoMoreFactors]
+                                              ) [Term]
+                                              NoMoreTerms(
+                                              ) [NoMoreTerms]
+                                            ) [PositiveExpr]
+                                          ) [DesExpr]
+                                        ) [AssignDesExpr]
+                                      ) [DesStmt]
+                                    ) [DesSemi]
+                                  ) [DesignatorSingleStmt]
+                                ) [StatementSingle]
+                              ) [StmtList]
+                              StatementSingle(
+                                DesignatorSingleStmt(
+                                  DesSemi(
+                                    DesStmt(
+                                      DesBrackExpr(
+                                        DesIdent(
+                                         niz
+                                        ) [DesIdent]
+                                        PositiveExpr(
+                                          Term(
+                                            DesignatorFactor(
+                                              DesBrackExpr(
+                                                DesIdent(
+                                                 niz
+                                                ) [DesIdent]
+                                                PositiveExpr(
+                                                  Term(
+                                                    DesignatorFactor(
+                                                      DesIdent(
+                                                       jedan
+                                                      ) [DesIdent]
+                                                      NoOptActParsParen(
+                                                      ) [NoOptActParsParen]
+                                                    ) [DesignatorFactor]
+                                                    NoMoreFactors(
+                                                    ) [NoMoreFactors]
+                                                  ) [Term]
+                                                  NoMoreTerms(
+                                                  ) [NoMoreTerms]
+                                                ) [PositiveExpr]
+                                              ) [DesBrackExpr]
+                                              NoOptActParsParen(
+                                              ) [NoOptActParsParen]
+                                            ) [DesignatorFactor]
+                                            NoMoreFactors(
+                                            ) [NoMoreFactors]
+                                          ) [Term]
+                                          NoMoreTerms(
+                                          ) [NoMoreTerms]
+                                        ) [PositiveExpr]
+                                      ) [DesBrackExpr]
+                                      AssignDesExpr(
+                                        AssignOperator(
+                                        ) [AssignOperator]
+                                        DesExpr(
+                                          PositiveExpr(
+                                            Term(
+                                              DesignatorFactor(
+                                                DesBrackExpr(
+                                                  DesIdent(
+                                                   niz
+                                                  ) [DesIdent]
+                                                  PositiveExpr(
+                                                    Term(
+                                                      DesignatorFactor(
+                                                        DesBrackExpr(
+                                                          DesIdent(
+                                                           niz
+                                                          ) [DesIdent]
+                                                          PositiveExpr(
+                                                            Term(
+                                                              NumFactor(
+                                                               0
+                                                              ) [NumFactor]
+                                                              NoMoreFactors(
+                                                              ) [NoMoreFactors]
+                                                            ) [Term]
+                                                            NoMoreTerms(
+                                                            ) [NoMoreTerms]
+                                                          ) [PositiveExpr]
+                                                        ) [DesBrackExpr]
+                                                        NoOptActParsParen(
+                                                        ) [NoOptActParsParen]
+                                                      ) [DesignatorFactor]
+                                                      NoMoreFactors(
+                                                      ) [NoMoreFactors]
+                                                    ) [Term]
+                                                    NoMoreTerms(
+                                                    ) [NoMoreTerms]
+                                                  ) [PositiveExpr]
+                                                ) [DesBrackExpr]
+                                                NoOptActParsParen(
+                                                ) [NoOptActParsParen]
+                                              ) [DesignatorFactor]
+                                              MoreFactorsAdded(
+                                                MultiplyOp(
+                                                ) [MultiplyOp]
+                                                NumFactor(
+                                                 3
+                                                ) [NumFactor]
+                                                NoMoreFactors(
+                                                ) [NoMoreFactors]
+                                              ) [MoreFactorsAdded]
+                                            ) [Term]
+                                            NoMoreTerms(
+                                            ) [NoMoreTerms]
+                                          ) [PositiveExpr]
+                                        ) [DesExpr]
+                                      ) [AssignDesExpr]
+                                    ) [DesStmt]
+                                  ) [DesSemi]
+                                ) [DesignatorSingleStmt]
+                              ) [StatementSingle]
+                            ) [StmtList]
+                            StatementSingle(
+                              DesignatorSingleStmt(
+                                DesSemi(
+                                  DesStmt(
+                                    DesIdent(
+                                     bodovi
+                                    ) [DesIdent]
+                                    AssignDesExpr(
+                                      AssignOperator(
+                                      ) [AssignOperator]
+                                      DesExpr(
+                                        PositiveExpr(
+                                          Term(
+                                            DesignatorFactor(
+                                              DesBrackExpr(
+                                                DesIdent(
+                                                 niz
+                                                ) [DesIdent]
+                                                PositiveExpr(
+                                                  Term(
+                                                    NumFactor(
+                                                     2
+                                                    ) [NumFactor]
+                                                    NoMoreFactors(
+                                                    ) [NoMoreFactors]
+                                                  ) [Term]
+                                                  NoMoreTerms(
+                                                  ) [NoMoreTerms]
+                                                ) [PositiveExpr]
+                                              ) [DesBrackExpr]
+                                              NoOptActParsParen(
+                                              ) [NoOptActParsParen]
+                                            ) [DesignatorFactor]
+                                            MoreFactorsAdded(
+                                              DivOp(
+                                              ) [DivOp]
+                                              DesignatorFactor(
+                                                DesBrackExpr(
+                                                  DesIdent(
+                                                   niz
+                                                  ) [DesIdent]
+                                                  PositiveExpr(
+                                                    Term(
+                                                      NumFactor(
+                                                       0
+                                                      ) [NumFactor]
+                                                      NoMoreFactors(
+                                                      ) [NoMoreFactors]
+                                                    ) [Term]
+                                                    NoMoreTerms(
+                                                    ) [NoMoreTerms]
+                                                  ) [PositiveExpr]
+                                                ) [DesBrackExpr]
+                                                NoOptActParsParen(
+                                                ) [NoOptActParsParen]
+                                              ) [DesignatorFactor]
+                                              NoMoreFactors(
+                                              ) [NoMoreFactors]
+                                            ) [MoreFactorsAdded]
+                                          ) [Term]
+                                          NoMoreTerms(
+                                          ) [NoMoreTerms]
+                                        ) [PositiveExpr]
+                                      ) [DesExpr]
+                                    ) [AssignDesExpr]
+                                  ) [DesStmt]
+                                ) [DesSemi]
+                              ) [DesignatorSingleStmt]
+                            ) [StatementSingle]
+                          ) [StmtList]
+                          StatementSingle(
+                            PrintStmt(
+                              PositiveExpr(
+                                Term(
+                                  DesignatorFactor(
+                                    DesIdent(
+                                     bodovi
+                                    ) [DesIdent]
+                                    NoOptActParsParen(
+                                    ) [NoOptActParsParen]
+                                  ) [DesignatorFactor]
+                                  NoMoreFactors(
+                                  ) [NoMoreFactors]
+                                ) [Term]
+                                NoMoreTerms(
+                                ) [NoMoreTerms]
+                              ) [PositiveExpr]
+                              NoOptNumConst(
+                              ) [NoOptNumConst]
+                            ) [PrintStmt]
+                          ) [StatementSingle]
+                        ) [StmtList]
+                        StatementSingle(
+                          PrintStmt(
+                            PositiveExpr(
+                              Term(
+                                DesignatorFactor(
+                                  DesBrackExpr(
+                                    DesIdent(
+                                     niz
+                                    ) [DesIdent]
+                                    PositiveExpr(
+                                      Term(
+                                        NumFactor(
+                                         2
+                                        ) [NumFactor]
+                                        NoMoreFactors(
+                                        ) [NoMoreFactors]
+                                      ) [Term]
+                                      NoMoreTerms(
+                                      ) [NoMoreTerms]
+                                    ) [PositiveExpr]
+                                  ) [DesBrackExpr]
+                                  NoOptActParsParen(
+                                  ) [NoOptActParsParen]
+                                ) [DesignatorFactor]
+                                NoMoreFactors(
+                                ) [NoMoreFactors]
+                              ) [Term]
+                              NoMoreTerms(
+                              ) [NoMoreTerms]
+                            ) [PositiveExpr]
+                            NoOptNumConst(
+                            ) [NoOptNumConst]
+                          ) [PrintStmt]
+                        ) [StatementSingle]
+                      ) [StmtList]
+                      StatementSingle(
+                        DesignatorSingleStmt(
+                          DesSemi(
+                            DesStmt(
+                              DesIdent(
+                               nizch
+                              ) [DesIdent]
+                              AssignDesExpr(
+                                AssignOperator(
+                                ) [AssignOperator]
+                                DesExpr(
+                                  PositiveExpr(
+                                    Term(
+                                      NewFactor(
+                                        Type(
+                                         char
+                                        ) [Type]
+                                        OptionalExpr(
+                                          PositiveExpr(
+                                            Term(
+                                              NumFactor(
+                                               3
+                                              ) [NumFactor]
+                                              NoMoreFactors(
+                                              ) [NoMoreFactors]
+                                            ) [Term]
+                                            NoMoreTerms(
+                                            ) [NoMoreTerms]
+                                          ) [PositiveExpr]
+                                        ) [OptionalExpr]
+                                      ) [NewFactor]
+                                      NoMoreFactors(
+                                      ) [NoMoreFactors]
+                                    ) [Term]
+                                    NoMoreTerms(
+                                    ) [NoMoreTerms]
+                                  ) [PositiveExpr]
+                                ) [DesExpr]
+                              ) [AssignDesExpr]
+                            ) [DesStmt]
+                          ) [DesSemi]
+                        ) [DesignatorSingleStmt]
+                      ) [StatementSingle]
+                    ) [StmtList]
+                    StatementSingle(
+                      DesignatorSingleStmt(
+                        DesSemi(
+                          DesStmt(
+                            DesBrackExpr(
+                              DesIdent(
+                               nizch
+                              ) [DesIdent]
+                              PositiveExpr(
+                                Term(
+                                  NumFactor(
+                                   0
+                                  ) [NumFactor]
+                                  NoMoreFactors(
+                                  ) [NoMoreFactors]
+                                ) [Term]
+                                NoMoreTerms(
+                                ) [NoMoreTerms]
+                              ) [PositiveExpr]
+                            ) [DesBrackExpr]
+                            AssignDesExpr(
+                              AssignOperator(
+                              ) [AssignOperator]
+                              DesExpr(
+                                PositiveExpr(
+                                  Term(
+                                    CharFactor(
+                                     a
+                                    ) [CharFactor]
+                                    NoMoreFactors(
+                                    ) [NoMoreFactors]
+                                  ) [Term]
+                                  NoMoreTerms(
+                                  ) [NoMoreTerms]
+                                ) [PositiveExpr]
+                              ) [DesExpr]
+                            ) [AssignDesExpr]
+                          ) [DesStmt]
+                        ) [DesSemi]
+                      ) [DesignatorSingleStmt]
+                    ) [StatementSingle]
+                  ) [StmtList]
+                  StatementSingle(
+                    DesignatorSingleStmt(
+                      DesSemi(
+                        DesStmt(
+                          DesBrackExpr(
+                            DesIdent(
+                             nizch
+                            ) [DesIdent]
+                            PositiveExpr(
+                              Term(
+                                DesignatorFactor(
+                                  DesIdent(
+                                   jedan
+                                  ) [DesIdent]
+                                  NoOptActParsParen(
+                                  ) [NoOptActParsParen]
+                                ) [DesignatorFactor]
+                                NoMoreFactors(
+                                ) [NoMoreFactors]
+                              ) [Term]
+                              NoMoreTerms(
+                              ) [NoMoreTerms]
+                            ) [PositiveExpr]
+                          ) [DesBrackExpr]
+                          AssignDesExpr(
+                            AssignOperator(
+                            ) [AssignOperator]
+                            DesExpr(
+                              PositiveExpr(
+                                Term(
+                                  CharFactor(
+                                   b
+                                  ) [CharFactor]
+                                  NoMoreFactors(
+                                  ) [NoMoreFactors]
+                                ) [Term]
+                                NoMoreTerms(
+                                ) [NoMoreTerms]
+                              ) [PositiveExpr]
+                            ) [DesExpr]
+                          ) [AssignDesExpr]
+                        ) [DesStmt]
+                      ) [DesSemi]
+                    ) [DesignatorSingleStmt]
+                  ) [StatementSingle]
+                ) [StmtList]
+                StatementSingle(
+                  DesignatorSingleStmt(
+                    DesSemi(
+                      DesStmt(
+                        DesBrackExpr(
+                          DesIdent(
+                           nizch
+                          ) [DesIdent]
+                          PositiveExpr(
+                            Term(
+                              DesignatorFactor(
+                                DesIdent(
+                                 pet
+                                ) [DesIdent]
+                                NoOptActParsParen(
+                                ) [NoOptActParsParen]
+                              ) [DesignatorFactor]
+                              NoMoreFactors(
+                              ) [NoMoreFactors]
+                            ) [Term]
+                            MoreTermsAdded(
+                              AddedTerm(
+                                MinusOp(
+                                ) [MinusOp]
+                                Term(
+                                  NumFactor(
+                                   3
+                                  ) [NumFactor]
+                                  NoMoreFactors(
+                                  ) [NoMoreFactors]
+                                ) [Term]
+                              ) [AddedTerm]
+                              NoMoreTerms(
+                              ) [NoMoreTerms]
+                            ) [MoreTermsAdded]
+                          ) [PositiveExpr]
+                        ) [DesBrackExpr]
+                        AssignDesExpr(
+                          AssignOperator(
+                          ) [AssignOperator]
+                          DesExpr(
+                            PositiveExpr(
+                              Term(
+                                CharFactor(
+                                 c
+                                ) [CharFactor]
+                                NoMoreFactors(
+                                ) [NoMoreFactors]
+                              ) [Term]
+                              NoMoreTerms(
+                              ) [NoMoreTerms]
+                            ) [PositiveExpr]
+                          ) [DesExpr]
+                        ) [AssignDesExpr]
+                      ) [DesStmt]
+                    ) [DesSemi]
+                  ) [DesignatorSingleStmt]
+                ) [StatementSingle]
+              ) [StmtList]
+              StatementSingle(
+                PrintStmt(
+                  PositiveExpr(
+                    Term(
+                      DesignatorFactor(
+                        DesBrackExpr(
+                          DesIdent(
+                           nizch
+                          ) [DesIdent]
+                          PositiveExpr(
+                            Term(
+                              NumFactor(
+                               1
+                              ) [NumFactor]
+                              NoMoreFactors(
+                              ) [NoMoreFactors]
+                            ) [Term]
+                            NoMoreTerms(
+                            ) [NoMoreTerms]
+                          ) [PositiveExpr]
+                        ) [DesBrackExpr]
+                        NoOptActParsParen(
+                        ) [NoOptActParsParen]
+                      ) [DesignatorFactor]
+                      NoMoreFactors(
+                      ) [NoMoreFactors]
+                    ) [Term]
+                    NoMoreTerms(
+                    ) [NoMoreTerms]
+                  ) [PositiveExpr]
+                  NoOptNumConst(
+                  ) [NoOptNumConst]
+                ) [PrintStmt]
+              ) [StatementSingle]
+            ) [StmtList]
+            StatementSingle(
+              PrintStmt(
+                PositiveExpr(
+                  Term(
+                    DesignatorFactor(
+                      DesBrackExpr(
+                        DesIdent(
+                         nizch
+                        ) [DesIdent]
+                        PositiveExpr(
+                          Term(
+                            DesignatorFactor(
+                              DesIdent(
+                               jedan
+                              ) [DesIdent]
+                              NoOptActParsParen(
+                              ) [NoOptActParsParen]
+                            ) [DesignatorFactor]
+                            MoreFactorsAdded(
+                              MultiplyOp(
+                              ) [MultiplyOp]
+                              NumFactor(
+                               2
+                              ) [NumFactor]
+                              NoMoreFactors(
+                              ) [NoMoreFactors]
+                            ) [MoreFactorsAdded]
+                          ) [Term]
+                          NoMoreTerms(
+                          ) [NoMoreTerms]
+                        ) [PositiveExpr]
+                      ) [DesBrackExpr]
+                      NoOptActParsParen(
+                      ) [NoOptActParsParen]
+                    ) [DesignatorFactor]
+                    NoMoreFactors(
+                    ) [NoMoreFactors]
+                  ) [Term]
+                  NoMoreTerms(
+                  ) [NoMoreTerms]
+                ) [PositiveExpr]
+                NoOptNumConst(
+                ) [NoOptNumConst]
+              ) [PrintStmt]
+            ) [StatementSingle]
+          ) [StmtList]
+          StatementSingle(
+            ReadStmt(
+              DesIdent(
+               bodovi
+              ) [DesIdent]
+            ) [ReadStmt]
+          ) [StatementSingle]
+        ) [StmtList]
+        StatementSingle(
+          PrintStmt(
+            PositiveExpr(
+              Term(
+                DesignatorFactor(
+                  DesIdent(
+                   bodovi
+                  ) [DesIdent]
+                  NoOptActParsParen(
+                  ) [NoOptActParsParen]
+                ) [DesignatorFactor]
+                NoMoreFactors(
+                ) [NoMoreFactors]
+              ) [Term]
+              NoMoreTerms(
+              ) [NoMoreTerms]
+            ) [PositiveExpr]
+            NoOptNumConst(
+            ) [NoOptNumConst]
+          ) [PrintStmt]
+        ) [StatementSingle]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  20:10:38,719 - ===================================

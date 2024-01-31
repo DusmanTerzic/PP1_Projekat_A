@@ -1,0 +1,386 @@
+
+
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+parser code {:
+
+	boolean errorDetected;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+:}
+
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+terminal PROG, BREAK, CLASS, CONST, ELSE, IF, WHILE, FOR, NEW, ARROW;
+terminal PRINT, READ, RETURN, VOID, EXTENDS, CONTINUE, FOREACH;
+terminal PLUS, MINUS, MUL, DIV, MOD, ISEQUAL, NEQUALS, GREATER;
+terminal GEQ, LESS, LEQ, AND, OR, EQUAL, INC, DEC, SEMI, COLON, NAMESPACE, STATIC;
+terminal COMMA, DOT, LPAREN, RPAREN, LBRACE, RBRACE, LBRACKET, RBRACKET, FINDANY;
+terminal Integer NUMBER;
+terminal String IDENT;
+terminal String BOOL;
+terminal Character CHAR;
+
+nonterminal ProgramDecl, ProgramDeclList;
+nonterminal ConstDeclList, VarDecl, VarDeclList;
+nonterminal OptionalBrackets, VarList, Assignop, Relop, Addop, Mulop;
+nonterminal OptionalExtends, OptionalClassDecls, MethodDeclList;
+nonterminal ClassDecl, FormPars, MulFormPars, OptIdentColons;
+nonterminal StatementList, Statement, Statements, SingleStatement;
+nonterminal DesignatorStatement, Namespace, StaticInitializer;
+nonterminal Label, DesignatorSemi, DesignatorHelperClassField, DesignatorHelperArray;
+nonterminal OptActParsParen, OptActPars, ActPars, CommaExpr;
+nonterminal MoreExprs, Condition, CondTermHelper, MoreCondTerms, OptNamespace;
+nonterminal CondTerm, CondFactHelper, MoreCondFacts;
+nonterminal OptionalElse, OptNumConst, IfStmtCond, DesignatorBrack;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodDecl, MethodTypeName, Program, ConstDecl, FormParsRparen;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj VarName, FormParTypeName, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, ConstTypeDecl,DesStmtChoice, ConstType, VarType, ClassName, MethodType;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor, Term, Expr, OptExpr, WhileExpr, DesignatorExpr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct AddedFactor, AddedTerm, MoreTerms, MoreFactors, OptSimpleExpr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct DesignatorList, DesignatorHelper, CondFact, OptRelopExpr;
+precedence left ELSE;
+
+Program ::= (Program) PROG ProgName:p OptNamespace:on ProgramDeclList LBRACE MethodDeclList RBRACE;
+
+ProgName ::= (ProgName) IDENT:progName;
+
+OptNamespace ::= (OptionalNamespace) Namespace:ns
+			 |
+			 (NoOptNamespace);
+			 
+Namespace ::= (Namespace)NAMESPACE IDENT:namespaceName LBRACE ProgramDeclList LBRACE MethodDeclList RBRACE RBRACE;
+
+ProgramDeclList ::= (ProgramDeclarations) ProgramDeclList ProgramDecl
+				|
+				(NoProgramDeclarations);
+				
+ProgramDecl ::= (ConstProgramDecl) ConstDecl
+			|
+			(VarProgramDecl) VarDecl
+			|
+			(ClassProgramDecl) ClassDecl;
+			
+				
+ConstDecl ::= (ConstDecl) CONST ConstTypeDecl:constTypeDecl IDENT:name EQUAL ConstType:constType ConstDeclList SEMI;
+
+ConstTypeDecl ::= (ConstTypeDecl) Type;
+
+ConstType ::= (NumberConst) NUMBER:number
+			|
+			(CharConst) CHAR:character
+			|
+			(BoolConst) BOOL:bool;
+
+ConstDeclList ::= (ConstList) COMMA IDENT EQUAL ConstType ConstDeclList
+				|
+				(NoConstList);
+
+Type ::= (Type) OptIdentColons:oi IDENT:typeName;
+
+OptIdentColons ::= (IdentColons) IDENT COLON COLON
+				|
+				(NoIdentCols);
+
+VarDecl ::= (VarDeclaration) VarType VarName VarList SEMI
+			|
+			(VarDeclErr1) error SEMI:l
+	   		{: parser.report_error("Assignment not in a good format on line " + lleft, null);  :};
+
+VarType ::= (VarType) Type:type;
+
+VarName ::= (VarName) IDENT:name OptionalBrackets;
+
+VarDeclList ::= (VarDeclarations) VarDeclList VarDecl
+			|
+			(NoVarDeclarations);
+			
+OptionalBrackets ::= (OptBrackets) LBRACKET RBRACKET
+					|
+					(NoOptBrackets);
+					
+VarList ::= (Vars) VarList COMMA VarName 
+		|
+		(NoVars)
+		|
+		(VarDeclErr2)error COMMA:l
+		{: parser.report_error("Assignment not in a good format on line " + lleft, null);  :}
+		;
+
+
+
+ClassDecl ::= (ClassDecl) CLASS ClassName:n OptionalExtends LBRACE VarDeclList OptionalClassDecls RBRACE;
+
+ClassName ::= (ClassName) IDENT:name;
+
+OptionalExtends ::= (Extends) EXTENDS Type:type
+				|
+				(NoExtends)
+				;
+
+OptionalClassDecls ::= (OptionalClassDeclarations) LBRACE MethodDeclList RBRACE
+					|
+					(NoOptClassDeclarations);
+					
+MethodDeclList ::= (MethodDeclarationList) MethodDeclList MethodDecl
+				|
+				(NoMethodDecls);
+
+MethodDecl ::= (MethodDecl) MethodTypeName LPAREN FormParsRparen
+ 				VarDeclList LBRACE StatementList RBRACE;	
+ 
+MethodTypeName ::= (MethodTypeName) MethodType:retType IDENT:methName;
+ 				
+MethodType ::= (MethType) Type:type | (NoType) VOID;
+
+FormParsRparen ::= (FormRParen) FormPars:pars RPAREN
+			|
+			(FormParsErrorParen) error RPAREN:l
+			{:parser.report_error("Method parameters incorrect. Syntax error on line " + lleft, null); :}
+			;
+
+FormPars ::= (FormalParameters) FormParTypeName MulFormPars
+			|
+			(NoFormPars);
+
+FormParTypeName ::= (FormParTypeName) Type:type IDENT:ident OptionalBrackets;
+
+MulFormPars ::= (MultipleFormalParameters) MulFormPars COMMA FormParTypeName
+			|
+			(NoMulFormPars)
+			|
+			(FormParsErrorComma) error COMMA:c
+			{:parser.report_error("Method parameters incorrect. Syntax error on line " + cleft, null);:}		
+			;
+			
+StatementList ::= (StmtList) StatementList Statement
+				|
+				(NoStatementList);
+				
+StaticInitializer ::= (StaticInitializer) STATIC StatementList;
+				
+Statement ::= (StatementSingle) SingleStatement
+			|
+			(StatementsMultiple) Statements;
+			
+Statements ::= (Statements) LBRACE StatementList RBRACE;
+
+SingleStatement ::= (BreakSingle) BREAK SEMI
+			|
+			(ContinueSingle) CONTINUE SEMI
+			|
+			(ReturnStmt) RETURN OptSimpleExpr:e SEMI
+			|
+			(ReadStmt) READ LPAREN Designator RPAREN SEMI
+			|
+			(DesignatorSingleStmt) DesignatorSemi:d
+			|
+			(PrintStmt) PRINT LPAREN Expr:e OptNumConst RPAREN SEMI
+			|
+			(IfStatement) IF IfStmtCond Statement OptionalElse
+			|
+			(WhileStatement) WhileExpr Statement
+			;
+			
+WhileExpr ::= (WhileExpr) WHILE LPAREN Condition RPAREN;
+			
+IfStmtCond ::= (If) LPAREN Condition RPAREN
+			|
+			(IfCondError) error RPAREN:l
+			{:parser.report_error("If condition incorrect. Syntax error on line " + lleft, null); :}
+			;
+			
+OptionalElse ::= (OptElse) ELSE Statement
+				|
+				(NoOptElse);
+
+OptNumConst ::= (OptionalNumConst) COMMA NUMBER
+			|
+			(NoOptNumConst)
+			;
+			
+Designator ::= (DesBrackExpr) DesignatorBrack:d LBRACKET Expr:e RBRACKET 
+			 | (DesDotIdent) Designator:d DOT IDENT:name
+			 | (DesIdent) IDENT:name;
+
+DesignatorBrack ::= (DesignatorBrack) Designator:d;
+
+DesignatorStatement ::= (DesStmt) Designator DesStmtChoice;
+
+DesignatorSemi ::= (DesSemi) DesignatorStatement:ds SEMI
+				|
+				(ErrorStmt) error SEMI:l
+		   		{: parser.report_error("Assignment not in a good format on line " + lleft, null);  :}
+				;
+				
+
+DesStmtChoice ::= (AssignDesExpr) Assignop DesignatorExpr:d
+				|
+				(IncDes) INC
+				|
+				(DecDes) DEC
+				|
+				(ActParsDes) LPAREN OptActPars:op RPAREN
+				;
+
+DesignatorExpr ::= (DesExpr)Expr:e
+				|
+				(FindAnyExpr)Designator:d DOT FINDANY LPAREN Expr:e RPAREN  SEMI
+				;
+
+Label ::= (Label) IDENT;
+
+Expr ::= (PositiveExpr) Term:t MoreTerms:mt;
+
+Term ::= (Term) Factor:f MoreFactors:mf;
+
+AddedTerm ::= (AddedTerm) Addop:a Term:t;
+
+MoreTerms ::= (MoreTermsAdded) AddedTerm:at MoreTerms:mt 
+			|
+			(NoMoreTerms)
+			;
+
+MoreFactors ::= (MoreFactorsAdded) Mulop:m Factor:f MoreFactors:mf
+			|
+			(NoMoreFactors);
+
+AddedFactor ::= (AddedFactor) Mulop Factor:f;
+
+Factor ::= (NumFactor) NUMBER
+		|
+		(CharFactor) CHAR
+		|
+		(BoolFactor) BOOL
+		|
+		(ExprFactor) LPAREN Expr:expr RPAREN
+		|
+		(NewFactor) NEW Type:type OptExpr:optExpr
+		|
+		(DesignatorFactor) Designator:designator OptActParsParen:optActPars
+		|
+		(MinusFactor) MINUS Factor:f
+		;
+		
+OptExpr ::= (OptionalExpr) LBRACKET Expr:expr RBRACKET
+		|
+		(NoOptionalExpr) 
+		;
+
+OptSimpleExpr ::= (OptionalSimpleExpr) Expr:e
+				|
+				(NoOptSimExpr)
+				;
+
+ActPars ::= (ActPars) Expr:e MoreExprs:me;
+
+OptActParsParen ::= (OptionalActParsParen) LPAREN ActPars RPAREN
+			|
+			(NoParsWithParen) LPAREN RPAREN
+			|
+			(NoOptActParsParen)
+			;
+			
+CommaExpr ::= (CommaExpr) COMMA Expr:e;
+
+MoreExprs ::= (MoreExpressions) CommaExpr:ce MoreExprs:me
+			|
+			(NoMoreExprs);
+			
+OptActPars ::= (OptionalActPars) ActPars
+			|
+			(NoActPars)
+			;
+
+Assignop ::= (AssignOperator) EQUAL;
+
+Relop ::= (IsEqualOp) ISEQUAL
+		|
+		(NEqualOp) NEQUALS
+		|
+		(GreaterOp) GREATER
+		|
+		(GEQOp) GEQ
+		|
+		(LesserOp) LESS
+		|
+		(LEQOp) LEQ;
+
+Addop ::= (PlusOp) PLUS
+		|
+		(MinusOp) MINUS;
+
+Mulop ::= (MultiplyOp) MUL
+		|
+		(DivOp) DIV
+		|
+		(ModOp) MOD;
+
+Condition ::= (Condition) CondTerm MoreCondTerms;
+
+CondTermHelper ::= (CondTermHelp) OR CondTerm;
+
+MoreCondTerms ::= (MoreConditionTerms) CondTermHelper MoreCondTerms
+				|
+				(NoMoreCondTerms)
+				;
+
+CondTerm ::= (ConditionTerm) CondFact MoreCondFacts;
+
+CondFactHelper ::= (CondFactsHelp) AND CondFact;
+
+MoreCondFacts ::= (MoreConditionFacts) CondFactHelper MoreCondFacts
+				|
+				(NoMoreCondFacts)
+				;
+				
+CondFact ::= (ConditionFact) Expr:e OptRelopExpr:ore;
+
+OptRelopExpr ::= (OptRelop) Relop Expr:e
+			|
+			(NoOptRelop)
+			;
+
+
+
+
+
+
+
+
+

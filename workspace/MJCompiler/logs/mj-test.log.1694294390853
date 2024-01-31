@@ -1,0 +1,147 @@
+INFO  23:19:31,334 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  23:19:31,343 - #2 program
+INFO  23:19:31,343 - #45 MJProgram
+INFO  23:19:31,343 - #5 const
+INFO  23:19:31,343 - #45 bool
+INFO  23:19:31,343 - #45 z
+INFO  23:19:31,344 - #31 =
+INFO  23:19:31,344 - #46 true
+INFO  23:19:31,344 - #34 ;
+INFO  23:19:31,344 - #45 int
+INFO  23:19:31,345 - #45 a
+INFO  23:19:31,345 - #36 ,
+INFO  23:19:31,345 - #45 b
+INFO  23:19:31,345 - #34 ;
+INFO  23:19:31,346 - #45 char
+INFO  23:19:31,346 - #45 c
+INFO  23:19:31,346 - #42 [
+INFO  23:19:31,346 - #43 ]
+INFO  23:19:31,346 - #34 ;
+INFO  23:19:31,346 - #45 bool
+INFO  23:19:31,346 - #45 d
+INFO  23:19:31,346 - #42 [
+INFO  23:19:31,358 - #43 ]
+INFO  23:19:31,358 - #36 ,
+INFO  23:19:31,358 - #45 e
+INFO  23:19:31,358 - #34 ;
+INFO  23:19:31,358 - #4 class
+INFO  23:19:31,358 - #45 Klasa1
+INFO  23:19:31,358 - #15 extends
+INFO  23:19:31,358 - #45 Integer
+INFO  23:19:31,358 - #40 {
+INFO  23:19:31,358 - #45 int
+INFO  23:19:31,358 - #45 d
+INFO  23:19:31,358 - #36 ,
+INFO  23:19:31,358 - #45 f
+INFO  23:19:31,358 - #34 ;
+INFO  23:19:31,358 - #41 }
+INFO  23:19:31,359 - #40 {
+INFO  23:19:31,360 - #41 }
+INFO  23:19:31,360 - Program(
+ MJProgram
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          ProgramDeclarations(
+            NoProgramDeclarations(
+            ) [NoProgramDeclarations]
+            ConstProgramDecl(
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+               z
+                BoolConst(
+                 true
+                ) [BoolConst]
+                NoConstList(
+                ) [NoConstList]
+              ) [ConstDecl]
+            ) [ConstProgramDecl]
+          ) [ProgramDeclarations]
+          VarProgramDecl(
+            VarDecl(
+              Type(
+               int
+              ) [Type]
+             a
+              NoOptBrackets(
+              ) [NoOptBrackets]
+              Vars(
+                NoVars(
+                ) [NoVars]
+               b
+                NoOptBrackets(
+                ) [NoOptBrackets]
+              ) [Vars]
+            ) [VarDecl]
+          ) [VarProgramDecl]
+        ) [ProgramDeclarations]
+        VarProgramDecl(
+          VarDecl(
+            Type(
+             char
+            ) [Type]
+           c
+            OptBrackets(
+            ) [OptBrackets]
+            NoVars(
+            ) [NoVars]
+          ) [VarDecl]
+        ) [VarProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDecl(
+          Type(
+           bool
+          ) [Type]
+         d
+          OptBrackets(
+          ) [OptBrackets]
+          Vars(
+            NoVars(
+            ) [NoVars]
+           e
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [Vars]
+        ) [VarDecl]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    ClassProgramDecl(
+      ClassDeclaration(
+       Klasa1
+        Extends(
+          Type(
+           Integer
+          ) [Type]
+        ) [Extends]
+        VarDeclarations(
+          NoVarDeclarations(
+          ) [NoVarDeclarations]
+          VarDecl(
+            Type(
+             int
+            ) [Type]
+           d
+            NoOptBrackets(
+            ) [NoOptBrackets]
+            Vars(
+              NoVars(
+              ) [NoVars]
+             f
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [Vars]
+          ) [VarDecl]
+        ) [VarDeclarations]
+        NoOptClassDeclarations(
+        ) [NoOptClassDeclarations]
+      ) [ClassDeclaration]
+    ) [ClassProgramDecl]
+  ) [ProgramDeclarations]
+) [Program]
+INFO  23:19:31,361 - ===================================
+INFO  23:19:31,361 -  Print count calls = 0
+INFO  23:19:31,361 -  Deklarisanih promenljivih ima = 0

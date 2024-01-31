@@ -1,0 +1,9 @@
+INFO  21:01:00,485 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  21:01:00,499 - #2 program
+INFO  21:01:00,499 - #45 MJProgram
+INFO  21:01:00,499 - #5 const
+INFO  21:01:00,499 - #45 int
+INFO  21:01:00,500 - #45 z
+INFO  21:01:00,500 - #31 =
+INFO  21:01:00,500 - #44 1
+INFO  21:01:00,500 - #34 ;

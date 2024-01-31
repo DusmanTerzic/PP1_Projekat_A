@@ -1,0 +1,123 @@
+INFO  23:25:45,778 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  23:25:45,806 - #2 program
+INFO  23:25:45,806 - #46 MJProgram
+INFO  23:25:45,806 - #5 const
+INFO  23:25:45,808 - #46 bool
+INFO  23:25:45,808 - #46 z
+INFO  23:25:45,808 - #31 =
+INFO  23:25:45,808 - #47 true
+INFO  23:25:45,808 - #34 ;
+INFO  23:25:45,809 - #46 int
+INFO  23:25:45,809 - #46 a
+INFO  23:25:45,810 - #36 ,
+INFO  23:25:45,810 - #46 b
+INFO  23:25:45,810 - #34 ;
+INFO  23:25:45,812 - #46 char
+INFO  23:25:45,812 - #46 c
+INFO  23:25:45,812 - #42 [
+INFO  23:25:45,812 - #43 ]
+INFO  23:25:45,812 - #34 ;
+INFO  23:25:45,812 - #46 bool
+INFO  23:25:45,812 - #46 d
+INFO  23:25:45,812 - #42 [
+INFO  23:25:45,813 - #43 ]
+INFO  23:25:45,813 - #36 ,
+INFO  23:25:45,813 - #46 e
+INFO  23:25:45,813 - #34 ;
+INFO  23:25:45,813 - #40 {
+INFO  23:25:45,813 - #41 }
+INFO  23:25:45,816 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          NoProgramDeclarations(
+          ) [NoProgramDeclarations]
+          ConstProgramDecl(
+            ConstDecl(
+              ConstTypeDecl(
+                Type(
+                 bool
+                ) [Type]
+              ) [ConstTypeDecl]
+             z
+              BoolConst(
+               true
+              ) [BoolConst]
+              NoConstList(
+              ) [NoConstList]
+            ) [ConstDecl]
+          ) [ConstProgramDecl]
+        ) [ProgramDeclarations]
+        VarProgramDecl(
+          VarDecl(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarName(
+             a
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [VarName]
+            Vars(
+              NoVars(
+              ) [NoVars]
+              VarName(
+               b
+                NoOptBrackets(
+                ) [NoOptBrackets]
+              ) [VarName]
+            ) [Vars]
+          ) [VarDecl]
+        ) [VarProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDecl(
+          VarType(
+            Type(
+             char
+            ) [Type]
+          ) [VarType]
+          VarName(
+           c
+            OptBrackets(
+            ) [OptBrackets]
+          ) [VarName]
+          NoVars(
+          ) [NoVars]
+        ) [VarDecl]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    VarProgramDecl(
+      VarDecl(
+        VarType(
+          Type(
+           bool
+          ) [Type]
+        ) [VarType]
+        VarName(
+         d
+          OptBrackets(
+          ) [OptBrackets]
+        ) [VarName]
+        Vars(
+          NoVars(
+          ) [NoVars]
+          VarName(
+           e
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+        ) [Vars]
+      ) [VarDecl]
+    ) [VarProgramDecl]
+  ) [ProgramDeclarations]
+  NoMethodDecls(
+  ) [NoMethodDecls]
+) [Program]
+INFO  23:25:45,817 - ===================================

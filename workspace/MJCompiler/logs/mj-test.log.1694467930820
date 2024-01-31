@@ -1,0 +1,263 @@
+INFO  23:30:40,708 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  23:30:40,734 - #2 program
+INFO  23:30:40,734 - #46 MJProgram
+INFO  23:30:40,734 - #5 const
+INFO  23:30:40,735 - #46 bool
+INFO  23:30:40,735 - #46 z
+INFO  23:30:40,736 - #31 =
+INFO  23:30:40,736 - #47 true
+INFO  23:30:40,736 - #34 ;
+INFO  23:30:40,736 - #5 const
+INFO  23:30:40,736 - #46 int
+INFO  23:30:40,736 - #46 t
+INFO  23:30:40,736 - #31 =
+INFO  23:30:40,736 - #45 21
+INFO  23:30:40,737 - #34 ;
+INFO  23:30:40,737 - #46 int
+INFO  23:30:40,737 - #46 a
+INFO  23:30:40,737 - #36 ,
+INFO  23:30:40,738 - #46 b
+INFO  23:30:40,738 - #34 ;
+INFO  23:30:40,738 - #46 char
+INFO  23:30:40,738 - #46 c
+INFO  23:30:40,738 - #42 [
+INFO  23:30:40,739 - #43 ]
+INFO  23:30:40,739 - #34 ;
+INFO  23:30:40,739 - #46 bool
+INFO  23:30:40,739 - #46 d
+INFO  23:30:40,739 - #42 [
+INFO  23:30:40,739 - #43 ]
+INFO  23:30:40,739 - #36 ,
+INFO  23:30:40,739 - #46 e
+INFO  23:30:40,739 - #34 ;
+INFO  23:30:40,739 - #40 {
+INFO  23:30:40,739 - #46 int
+INFO  23:30:40,739 - #46 abc
+INFO  23:30:40,740 - #38 (
+INFO  23:30:40,740 - #46 int
+INFO  23:30:40,740 - #46 a
+INFO  23:30:40,740 - #36 ,
+INFO  23:30:40,740 - #46 int
+INFO  23:30:40,740 - #46 b
+INFO  23:30:40,740 - #39 )
+INFO  23:30:40,740 - #46 int
+INFO  23:30:40,742 - #46 c
+INFO  23:30:40,742 - #34 ;
+INFO  23:30:40,742 - #46 int
+INFO  23:30:40,742 - #46 d
+INFO  23:30:40,742 - #34 ;
+INFO  23:30:40,742 - #40 {
+INFO  23:30:40,742 - #13 return
+INFO  23:30:40,742 - #46 c
+INFO  23:30:40,742 - #34 ;
+INFO  23:30:40,744 - #41 }
+INFO  23:30:40,744 - #41 }
+INFO  23:30:40,748 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ProgramDeclarations(
+    ProgramDeclarations(
+      ProgramDeclarations(
+        ProgramDeclarations(
+          ProgramDeclarations(
+            NoProgramDeclarations(
+            ) [NoProgramDeclarations]
+            ConstProgramDecl(
+              ConstDecl(
+                ConstTypeDecl(
+                  Type(
+                   bool
+                  ) [Type]
+                ) [ConstTypeDecl]
+               z
+                BoolConst(
+                 true
+                ) [BoolConst]
+                NoConstList(
+                ) [NoConstList]
+              ) [ConstDecl]
+            ) [ConstProgramDecl]
+          ) [ProgramDeclarations]
+          ConstProgramDecl(
+            ConstDecl(
+              ConstTypeDecl(
+                Type(
+                 int
+                ) [Type]
+              ) [ConstTypeDecl]
+             t
+              NumberConst(
+               21
+              ) [NumberConst]
+              NoConstList(
+              ) [NoConstList]
+            ) [ConstDecl]
+          ) [ConstProgramDecl]
+        ) [ProgramDeclarations]
+        VarProgramDecl(
+          VarDecl(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarName(
+             a
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [VarName]
+            Vars(
+              NoVars(
+              ) [NoVars]
+              VarName(
+               b
+                NoOptBrackets(
+                ) [NoOptBrackets]
+              ) [VarName]
+            ) [Vars]
+          ) [VarDecl]
+        ) [VarProgramDecl]
+      ) [ProgramDeclarations]
+      VarProgramDecl(
+        VarDecl(
+          VarType(
+            Type(
+             char
+            ) [Type]
+          ) [VarType]
+          VarName(
+           c
+            OptBrackets(
+            ) [OptBrackets]
+          ) [VarName]
+          NoVars(
+          ) [NoVars]
+        ) [VarDecl]
+      ) [VarProgramDecl]
+    ) [ProgramDeclarations]
+    VarProgramDecl(
+      VarDecl(
+        VarType(
+          Type(
+           bool
+          ) [Type]
+        ) [VarType]
+        VarName(
+         d
+          OptBrackets(
+          ) [OptBrackets]
+        ) [VarName]
+        Vars(
+          NoVars(
+          ) [NoVars]
+          VarName(
+           e
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+        ) [Vars]
+      ) [VarDecl]
+    ) [VarProgramDecl]
+  ) [ProgramDeclarations]
+  MethodDeclarationList(
+    NoMethodDecls(
+    ) [NoMethodDecls]
+    MethodDecl(
+      MethodTypeName(
+        MethType(
+          Type(
+           int
+          ) [Type]
+        ) [MethType]
+       abc
+      ) [MethodTypeName]
+      FormRParen(
+        FormalParameters(
+          FormParTypeName(
+            Type(
+             int
+            ) [Type]
+           a
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [FormParTypeName]
+          MultipleFormalParameters(
+            NoMulFormPars(
+            ) [NoMulFormPars]
+            FormParTypeName(
+              Type(
+               int
+              ) [Type]
+             b
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [FormParTypeName]
+          ) [MultipleFormalParameters]
+        ) [FormalParameters]
+      ) [FormRParen]
+      VarDeclarations(
+        VarDeclarations(
+          NoVarDeclarations(
+          ) [NoVarDeclarations]
+          VarDecl(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarName(
+             c
+              NoOptBrackets(
+              ) [NoOptBrackets]
+            ) [VarName]
+            NoVars(
+            ) [NoVars]
+          ) [VarDecl]
+        ) [VarDeclarations]
+        VarDecl(
+          VarType(
+            Type(
+             int
+            ) [Type]
+          ) [VarType]
+          VarName(
+           d
+            NoOptBrackets(
+            ) [NoOptBrackets]
+          ) [VarName]
+          NoVars(
+          ) [NoVars]
+        ) [VarDecl]
+      ) [VarDeclarations]
+      StmtList(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementSingle(
+          ReturnStmt(
+            OptionalSimpleExpr(
+              PositiveExpr(
+                Term(
+                  DesignatorFactor(
+                    Designator(
+                     c
+                      NoDesList(
+                      ) [NoDesList]
+                    ) [Designator]
+                    NoOptActParsParen(
+                    ) [NoOptActParsParen]
+                  ) [DesignatorFactor]
+                  NoMoreFactors(
+                  ) [NoMoreFactors]
+                ) [Term]
+                NoMoreTerms(
+                ) [NoMoreTerms]
+              ) [PositiveExpr]
+            ) [OptionalSimpleExpr]
+          ) [ReturnStmt]
+        ) [StatementSingle]
+      ) [StmtList]
+    ) [MethodDecl]
+  ) [MethodDeclarationList]
+) [Program]
+INFO  23:30:40,748 - ===================================

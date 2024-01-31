@@ -1,0 +1,44 @@
+INFO  13:21:51,988 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\test301.mj
+INFO  13:21:52,013 - #2 program
+INFO  13:21:52,015 - #45 test301
+INFO  13:21:52,015 - #5 const
+INFO  13:21:52,015 - #45 int
+INFO  13:21:52,015 - #45 nula
+INFO  13:21:52,015 - #31 =
+INFO  13:21:52,015 - #44 0
+INFO  13:21:52,015 - #34 ;
+INFO  13:21:52,015 - #5 const
+INFO  13:21:52,016 - #45 int
+INFO  13:21:52,016 - #45 jedan
+INFO  13:21:52,016 - #31 =
+INFO  13:21:52,016 - #44 1
+INFO  13:21:52,016 - #34 ;
+INFO  13:21:52,016 - #5 const
+INFO  13:21:52,016 - #45 int
+INFO  13:21:52,016 - #45 pet
+INFO  13:21:52,016 - #31 =
+INFO  13:21:52,016 - #44 5
+INFO  13:21:52,016 - #34 ;
+INFO  13:21:52,016 - #45 int
+INFO  13:21:52,028 - #45 niz
+INFO  13:21:52,028 - #42 [
+INFO  13:21:52,028 - #43 ]
+INFO  13:21:52,028 - #36 ,
+INFO  13:21:52,029 - #45 niz2
+INFO  13:21:52,029 - #42 [
+INFO  13:21:52,029 - #43 ]
+INFO  13:21:52,029 - #36 ,
+INFO  13:21:52,029 - #45 a
+INFO  13:21:52,029 - #36 ,
+INFO  13:21:52,029 - #45 b
+INFO  13:21:52,029 - #34 ;
+INFO  13:21:52,029 - #45 char
+INFO  13:21:52,030 - #45 nizch
+INFO  13:21:52,030 - #42 [
+INFO  13:21:52,030 - #43 ]
+INFO  13:21:52,030 - #34 ;
+INFO  13:21:52,030 - #40 {
+INFO  13:21:52,030 - #14 void
+ERROR 13:21:52,030 - 
+Sintaksna greska na liniji 13
+ERROR 13:21:52,030 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13

@@ -1,0 +1,16 @@
+INFO  00:24:27,261 - Compiling source file: C:\Users\Dušan\Desktop\PP1 PROJEKAT\workspace\MJCompiler\test\program.mj
+INFO  00:24:27,287 - #2 program
+INFO  00:24:27,287 - #46 MJProgram
+INFO  00:24:27,287 - #40 {
+INFO  00:24:27,287 - #41 }
+INFO  00:24:27,290 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  NoProgramDeclarations(
+  ) [NoProgramDeclarations]
+  NoMethodDecls(
+  ) [NoMethodDecls]
+) [Program]
+INFO  00:24:27,290 - ===================================
+ERROR 00:24:27,292 - Greska: Metoda main ne postoji! na liniji 1
